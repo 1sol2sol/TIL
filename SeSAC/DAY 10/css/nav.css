@@ -1,0 +1,35 @@
+.tab-bar{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0; bottom: 0;
+    background-color: #f7f7f7;
+    border-top: #c0c0c0;
+    padding: 10px 30px 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab-bar-tab{
+    color: #c0c0c0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tab-bar-tab i{
+    margin-bottom: 5px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.tab-bar-tab:hover{
+    transform: scale(1.05);
+    transition: transform .3s linear;
+}
+.tab-bar-tab .tab-bar-title{
+    font-size: 10px;
+}
+
+.tab-bar-tab.tab-bar-selected{
+    color: #523737;
+}

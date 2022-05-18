@@ -1,0 +1,32 @@
+.chat-section-row{
+    padding: 10px 15px;
+    border-top: 1px solid #e3e3e3;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.chat-section-row .chat-section-column{
+    display: flex;
+    align-items: center;
+    
+}
+.chat-section-column img{
+    width:45px;
+    border-radius: 50%;
+}
+
+.chat-section-column .chat-info{
+    margin-left: 10px;
+}
+   
+.chat-section-column .chat-section-name{
+   padding-bottom: 20px;
+    font-weight: 600;
+}
+.chat-section-message, .chat-time{
+    color: #e3e3e3;
+    font-size: 13px;
+}
+
+

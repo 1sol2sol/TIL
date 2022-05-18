@@ -1,0 +1,65 @@
+.header.header-transparent{
+    background-color: transparent;
+}
+
+.profile .profile-header{
+    height: 65vh; /*why can't use % ??*/
+    background: url('../images/bg_default.png') no-repeat center / cover;
+    width: 100%;
+    position: relative; 
+    top: -60px;
+    /*body에 상단 하단 패딩이 60px씩 걸려 있는 상태인데 해당 이미지가 바디 0부터 들어가야 하기때문에 */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.profile-header-container img{
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-header-container{
+    text-align: center;
+    position: relative;
+    bottom: -60px;
+    /* 내가 위치한 현재 좌표에서 공간 밖으로 60px */
+}
+
+.profile .profile-container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-container input{
+    padding: 5px;
+    margin-bottom: 20px;
+    text-align: center; /*.profile-container input::placeholder{text-align: center;}*/
+}
+
+.profile-actions{
+    display: flex;
+}
+.profile-action{ /*아이템 안에 있는 글자와 그림을 상하로 놓기 위해*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 7px;
+}
+
+.profile-action-circle{
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    padding: 15px;
+    color: #523737;
+    margin-bottom: 15px;
+}
+
+.profile-action-title{
+    font-size: 12px;
+    font-weight: 600;
+}
