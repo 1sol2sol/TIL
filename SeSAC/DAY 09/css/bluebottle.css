@@ -1,0 +1,315 @@
+html,
+body {
+  text-size-adjust: none; /*뷰포트 방향 전환시 텍스트 사이즈 자동 조절 변환 방지*/
+  font-size: 16px;
+}
+a {
+  display: block;
+}
+body {
+  overflow-x: hidden;
+} /*가로 스크롤이 넘어가지 못하게 하려고 */
+
+/* header */
+.header {
+  height: 70px;
+  /* 상하단 패딩처리를 안한이유는 로고 영역을 더 넓게 잡기 위해 /  */
+  background-color: #242424;
+  position: relative;
+}
+.header h1 {
+  height: 70px;
+  width: 150px;
+  /* 이미지는 이미지의 크기만큼 보이게할거지만 width를 이미지 크기보다 넓게 잡은 이유는 반응 크기를 더 넓게 잡기 위해 */
+  margin: auto;
+  text-indent: -9999px;
+  font-size: 0;
+  background: url("../img/icon/text-logo.png") no-repeat center;
+  background-size: auto 31px; /*이미지 사이즈가 221*62 이기때문에 한쪽 사이즈를 주고 나머지는 auto*/
+}
+.header h1 a {
+  height: 100%;
+  /* a태그에 높이가 있어야 반응 영역이 잡힌다 */
+}
+
+.header .home-btn {
+  text-indent: -9999px;
+  font-size: 0;
+  width: 36px;
+  height: 34px;
+  background: url("../img/icon/toplogo.png") no-repeat center / 12px auto;
+  position: absolute;
+  left: 20px;
+  top: 18px;
+}
+
+.header .menu-btn {
+  text-indent: -9999px;
+  font-size: 0;
+  width: 46px;
+  height: 46px;
+  background: url("../img/icon/menu-btn.png") no-repeat center / 29px auto;
+  position: absolute;
+  right: 16px;
+  top: 12px;
+  /*반응 공간을 넓히기 위해 공간을 임의로 크게 잡아 놓은 상태인데 여기서 %를 이용하게 디ㅗ면 우리가 넓게 잡아 놓은 공간에서 50%가 들어가게 되어 
+  크기가 맞지 않게 된다.  %는 영역의 %이기 때문에 백분율이 아니라 절대수치로 줘야함 */
+}
+
+.main-banner li {
+  position: relative;
+}
+.main-banner li img {
+  width: 100%; /*넓이가 조절이 되면 높이는 알아서 적용됨 사이즈에 상관없이 넓이 100% 그에 따른 높이가 지정됨*/
+}
+
+.main-banner li a {
+  position: absolute;
+  width: 38.055vw; /*(137/360)*100*/
+  height: 10.277vw;
+  bottom: 17.777vw;
+  background-color: #fff;
+  text-align: center;
+  line-height: 10.277vw;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3.88vw; /*(14/360)*100*/
+  /* 화면상에 꽉차는 폰트를 넣고 싶을때 vw?? 
+rem 이나 em을 쓰고 싶을 경우 미디어쿼리를 이용하여 기준 폰트를 계쏙 바꿔줘야한다. */
+}
+
+.subscribe-area {
+  padding: 12.222vw 0;
+}
+.subscribe-area .subscribe-title {
+  font-size: 4.44vw;
+  color: #36373b;
+  line-height: 1.79;
+  margin-bottom: 3.888vw;
+  text-align: center;
+}
+
+.subscribe-area .subscribe-list li {
+  text-align: center;
+  margin-bottom: 3.3333vw;
+}
+
+.subscribe-area .subscribe-list li img {
+  width: 73.888vw;
+}
+
+.subscribe-area .subscribe_btn {
+  background-color: #36373b;
+  color: #fff;
+  text-align: center;
+  width: 64.722vw;
+  height: 16.389vw;
+  font-size: 4.444vw;
+  margin: 5.55vw auto 0;
+  line-height: 16.389vw;
+}
+
+/* 메뉴 영역 */
+.menu-area {
+  background: url("../img/menu-bg.png") no-repeat top center / cover;
+  padding: 16.111vw 4.444vw 14.722vw;
+}
+
+.menu-area .menu-title {
+  color: #fff;
+  text-align: center;
+  font-size: 8.055vw;
+  padding-top: 4.44vw;
+  position: relative;
+}
+
+.menu-area .menu-title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1da4d9;
+  width: 10.833vw;
+  height: 1.389vw;
+}
+
+.menu-area .menu-title-sub {
+  text-align: center;
+  color: #1da4d9;
+  margin-top: 3.889vw;
+  font-size: 3.889vw;
+  margin-bottom: 8.889vw;
+}
+
+.menu-area .menu-list > li {
+  /*이미지 사이 간격 9px 고정 시킨다*/
+  float: left;
+  width: calc(50% - 4.5px);
+}
+.menu-area .menu-list > li:nth-child(2n + 1) {
+  /*n은 0부터 시작함*/
+  margin-right: 4.5px;
+}
+.menu-area .menu-list > li:nth-child(2n) {
+  margin-left: 4.5px;
+}
+.menu-area .menu-list > li img {
+  width: 100%;
+}
+.menu-area .menu-list > li span {
+  display: block;
+}
+.menu-area .menu-list > li .menu-thum-txt {
+  text-align: center;
+  color: #a1a1a1;
+  padding: 3.889vw 0;
+}
+.menu-area .menu-list > li .menu-thum-txt strong {
+  color: #fff;
+  display: block;
+}
+
+.menu-area .menu-allview-btn {
+  color: #fff;
+  border: 1px solid #464646; /*보더는 화면이 작아진다고 작게 들어가고 커진다고 두껍게 들어가지 않기 때문에 고정 픽셀을 사용함*/
+  margin: auto;
+  background: #1da4d9;
+  width: 45.55vw;
+  height: 13.35vw;
+  margin-top: 11.66vw;
+  line-height: 13.35vw;
+  font-size: 3.6vw;
+  text-align: center;
+}
+.bestmenu-area {
+  background-color: #ebebeb;
+  padding: 9.166vw 5.138vw 7.777vw 4.388vw;
+}
+.bestmenu-area .bestmenu-title {
+  position: relative;
+  color: #36373b;
+  padding-top: 4.444vw;
+  padding-left: 11.666vw;
+  font-size: 5.694vw;
+}
+.bestmenu-area .bestmenu-title::before {
+  content: "";
+  display: block;
+  width: 10.277vw;
+  height: 1.666vw;
+  background-color: #36373b;
+  position: absolute;
+  left: 11.666vw;
+  top: 0;
+}
+
+.bestmenu-area .bestmenu-title-sub {
+  color: #36373b;
+  margin-top: 4.166vw;
+  margin-bottom: 4.638vw;
+  font-size: 3.472vw;
+  padding-left: 11.666vw;
+}
+
+.bestmenu-list {
+  background: url("../img/bestmenu1.png") no-repeat center / cover;
+  width: 325.7px;
+  height: 325.7px;
+}
+.bestmenu-des-box {
+  background-color: #fff;
+  width: 90.472vw;
+  height: 34.055vw;
+  margin: auto;
+  box-sizing: border-box;
+}
+.bestmenu-des-box span {
+  color: #4b4e54;
+  font-size: 5.277vw;
+  padding-top: 4.611vw;
+}
+
+.bestmenu-des-box .bm-subscribe-title {
+  font-size: 3.194vw;
+  color: #606367;
+  line-height: 1.65;
+  padding-top: 4.166vw;
+  padding-bottom: 6.111vw;
+}
+.bestmenu-area .bm-circle div {
+  width: 4.444vw;
+  height: 4.166vw;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid red;
+  float: left;
+}
+
+/* coffee-area */
+.coffee-area {
+  padding: 8.888vw 4.611vw;
+  background-color: #242424;
+}
+.coffee-area .coffee-list {
+  width: 91.111vw;
+  height: 71.388vw;
+
+  /*width: 328px;
+  height: 257px;*/
+  background: url("../img/matchlistimg1.png") no-repeat center / cover;
+}
+.coffee-area .coffee-des-box {
+  width: 91.111vw;
+  height: 71.388vw;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.coffee-area .coffee-des-title {
+  font-size: 10.277vw;
+  padding-top: 15.555vw;
+  text-align: center;
+  color: #575756;
+}
+.coffee-area .coffee-sub-des {
+  font-size: 3.611vw;
+  color: #575756;
+  text-align: center;
+  padding-top: 8.333vw;
+}
+.coffee-area .quiz-btn {
+  background-color: #00a1df;
+  color: #fff;
+  text-align: center;
+  width: 46.944vw;
+  height: 15.833vw;
+  font-size: 4.305vw;
+  line-height: 15.833vw;
+  margin: 11.388vw auto 8.888vw;
+}
+
+.shop-area {
+  padding: 11.111vw 4.166vw 8.888vw;
+  background-color: #fff;
+}
+
+.shop-area .shop-area-title {
+  color: #00a1df;
+  font-size: 8.75vw;
+  text-align: center;
+  margin-bottom: 8.888vw;
+  font-weight: 500;
+  line-height: 1.2;
+  font-family: NotoSansCJKkr;
+}
+
+.shop-area .shop-area-title-sub {
+  display: block;
+  font-size: 4.861vw;
+  color: #666666;
+  text-align: center;
+  line-height: 0.89;
+  margin-bottom: 16.389vw;
+}
+.shop-area dl{padding-left: 14.167vw; margin-bottom: 8.889vw;}
