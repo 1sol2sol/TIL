@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap1{
+            display: flex;
+            width: 600px;
+            height: 40px;
+            background-color: #666;
+        }
+        .wrap1>div{width: 100px;}
+        .wrap1>div:nth-child(1){background-color: red; flex-grow: 2;}
+        .wrap1>div:nth-child(2){background-color: green;flex-grow: 1;}
+        .wrap1>div:nth-child(3){background-color: blue; flex-grow: 1;} 
+
+        .wrap2{
+            display: flex;
+            width: 600px;
+            height: 40px;
+            background-color: #666;
+            margin-top: 50px;
+        }
+
+        .wrap2>div{width: 300px;}
+        .wrap2>div:nth-child(1){background-color: red; flex-shrink: 2;} /*2배율 만큼 축소*/
+        .wrap2>div:nth-child(2){background-color: green; flex-shrink: 1;}
+        .wrap2>div:nth-child(3){background-color: blue; flex-shrink: 1;} 
+
+        .wrap3{
+            display: flex;
+            width: 600px;
+            height: 40px;
+            background-color: #666;
+            margin-top: 50px;
+        }
+
+        .wrap3>div{width: 400px;}
+        .wrap3>div:nth-child(1){background-color: red; flex-shrink: 3;} /*3배율 만큼 축소*/
+        .wrap3>div:nth-child(2){background-color: green; flex-shrink: 1;}
+        .wrap3>div:nth-child(3){background-color: blue; flex-shrink: 1;} 
+
+        .wrap4{
+            display: flex;
+            width: 800px;
+            height: 40px;
+            background-color: #666;
+            margin-top: 50px;
+        }
+        .wrap4>div{width: 300px;}
+        .wrap4>div:nth-child(1){background-color: red; flex-shrink: 2;} /*2ㄴ배율 만큼 축소*/
+        .wrap4>div:nth-child(2){background-color: green; flex-shrink: 2;}
+        .wrap4>div:nth-child(3){background-color: blue; flex-shrink: 0;} 
+
+        .wrap5{
+            display: flex;
+            width: 600px;
+            height: 40px;
+            background-color: #666;
+            margin-top: 50px;
+        }
+        .wrap5>div{flex-basis: 300px;}
+        /*flex-basis: auto; width 값 지정안하면 컨텐츠의 크기만큼 들어간다.   
+          flex-basis: 300px; 이어도 부모 박스의 넓이가 600px 이고 자동으로 shrink 되어 하나의 박스당 200px씩 받게된다*/
+        .wrap5>div:nth-child(1){background-color: red; } 
+        .wrap5>div:nth-child(2){background-color: green; }
+        .wrap5>div:nth-child(3){background-color: blue;} 
+
+    </style>
+</head>
+<body>
+    <!-- div.wrap$*4>div.box*3-->
+    <div class="wrap1">
+        <div class="box"></div> <!--(600/4)*2 , 4로 나눈 이유는 공간을 4등분 했기때문 -->
+        <div class="box"></div> <!--(600/4)*1-->
+        <div class="box"></div> <!--(600/4)*1-->
+    </div>
+    <div class="wrap2">
+        <div class="box"></div> <!-- 300 - {(300/4)*2} = 150 -->
+        <div class="box"></div> <!-- 300 - {(300/4)*1} = 225 -->
+        <div class="box"></div> <!-- 300 - {(300/4)*1} = 225 -->
+    </div>
+    <div class="wrap3">
+        <div class="box"></div> 
+        <!-- 400 - {(600/5)*3} = 40 , 600만큼의 크기가 밖으로 나갔기 때문에 600/5 해서 원래 아이템의 크기 400에서 뺀것-->
+        <div class="box"></div> <!-- 400 - {(600/5)*1} = 280 -->
+        <div class="box"></div> <!-- 400 - {(600/5)*1} = 280 -->
+    </div>
+    <div class="wrap4"> <!-- wrap4의 넓이는 800-->
+        <div class="box"></div> <!-- 300 - {(100/4)*2} = 250-->
+        <div class="box"></div> <!-- 300 - {(100/4)*2} = 250-->
+        <div class="box"></div> <!-- 300 - {(100/4)*0} = 300-->
+    </div>
+    <div class="wrap5"> 
+        <div class="box">박스</div> 
+        <div class="box">박스 박스</div> 
+        <div class="box">박스</div> 
+</body>
+</html>
