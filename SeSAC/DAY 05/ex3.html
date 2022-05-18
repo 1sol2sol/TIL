@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 300px;
+        height: 300px;
+        float: left;
+        background-color: #f93;
+        margin: 20px;
+        text-align: center;
+        line-height: 300px;
+      }
+      div:nth-of-type(1) {
+        box-shadow: 12px 15px 10px 0px rgba(0, 0, 0, 0.5) inset; /*outset(기본값): 바깥 그림자*/
+      }
+
+      div:nth-of-type(2) {
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      div:nth-of-type(3) {
+        border-radius: 50px 30px;
+      }
+      div:nth-of-type(4) {
+        border-radius: 80px 80px 0 0; /*왼쪽상단부터 시계방향으로*/
+      }
+      div:nth-of-type(5) {
+        border-radius: 100px 50px 100px; /*왼쪽상단, 대각선, 오른쪽하단*/
+      }
+      div:nth-of-type(6) {
+        border-radius: 50%;
+        border-bottom-right-radius: 20px;
+      }
+      h1 {
+        clear: both;
+        font-size: 50px;
+        color: #f93;
+      }
+      h1:nth-of-type(1) {
+        text-shadow: 3px 6px 3px rgba(0, 0, 0, 0.5);
+      }
+      h1:nth-of-type(2) {
+        text-shadow: -3px -6px 3px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div>둥근모서리</div>
+    <div><img src="img/blog/list8.jpg" alt="" /></div>
+    <div>둥근모서리</div>
+    <div>둥근모서리</div>
+    <div>둥근모서리</div>
+    <div>둥근모서리</div>
+    <h1>문자그림자1</h1>
+    <h1>textshadow2</h1>
+    <h1>textshadow3</h1>
+  </body>
+</html>
