@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  /*플렉스 컨테이너*/
+.row{ 
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* 플렉스 아이템 */
+.column{
+  flex: 100%; /*flex: 1 1 100% (기본넓이 100%)*/
+}
+
+
+.column img{
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+@media (min-width: 600px){
+  .column{flex: 50%; padding: 0 4px;}
+}
+
+@media (min-width: 960px){
+  .column{flex: 25%;} /*padding: 0 4px;이 위에서 상속되어서 들어옴*/
+}
+</style>
+</head>
+<body>
+
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="./images/wedding.jpg" style="width:100%">
+    <img src="./images/rocks.jpg" style="width:100%">
+    <img src="./images/falls2.jpg" style="width:100%">
+    <img src="./images/paris.jpg" style="width:100%">
+    <img src="./images/nature.jpg" style="width:100%">
+    <img src="./images/mist.jpg" style="width:100%">
+    <img src="./images/paris.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="./images/underwater.jpg" style="width:100%">
+    <img src="./images/ocean.jpg" style="width:100%">
+    <img src="./images/wedding.jpg" style="width:100%">
+    <img src="./images/mountainskies.jpg" style="width:100%">
+    <img src="./images/rocks.jpg" style="width:100%">
+    <img src="./images/underwater.jpg" style="width:100%">
+  </div>  
+  <div class="column">
+    <img src="./images/wedding.jpg" style="width:100%">
+    <img src="./images/rocks.jpg" style="width:100%">
+    <img src="./images/falls2.jpg" style="width:100%">
+    <img src="./images/paris.jpg" style="width:100%">
+    <img src="./images/nature.jpg" style="width:100%">
+    <img src="./images/mist.jpg" style="width:100%">
+    <img src="./images/paris.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="./images/underwater.jpg" style="width:100%">
+    <img src="./images/ocean.jpg" style="width:100%">
+    <img src="./images/wedding.jpg" style="width:100%">
+    <img src="./images/mountainskies.jpg" style="width:100%">
+    <img src="./images/rocks.jpg" style="width:100%">
+    <img src="./images/underwater.jpg" style="width:100%">
+  </div>
+</div>
+</body>
+</html>
