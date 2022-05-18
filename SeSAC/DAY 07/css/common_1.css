@@ -1,0 +1,150 @@
+@import url(reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Philosopher:wght@400;700&display=swap");
+/*
+ font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Philosopher', sans-serif;
+ */
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+.inner {
+  width: 1280px;
+  margin: auto;
+}
+.header-top {
+  height: 170px;
+  padding-top: 44px;
+  box-sizing: border-box;
+}
+.header-top .inner {
+  position: relative;
+}
+.header-top .logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header-top .logo a {
+  display: block;
+  width: 199px;
+  height: 64px;
+  background: url("../img/logo.png") no-repeat;
+  text-indent: -99999px;
+  font-size: 0;
+}
+.lang-area {
+  float: left;
+  width: 85px;
+  height: 25px;
+  line-height: 25px;
+  color: #858181;
+  background-color: #edeee2;
+  font-size: 12px;
+  margin-left: 14px;
+  margin-top: 21px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.lang-area ::after {
+  content: "";
+  position: absolute;
+  background: url("../img/lang_bullet.png") no-repeat;
+  width: 8px;
+  height: 5px;
+  right: 13px;
+  top: 10px;
+}
+
+.lang-list li {
+  background-color: #edeee2;
+  height: 25px;
+  padding-left: 17px;
+  line-height: 25px;
+}
+
+.topmenu-area {
+  float: right;
+}
+.top-search-area {
+  float: left;
+  width: 174px;
+  height: 45px;
+  background-color: #edeee2;
+  border-radius: 24px;
+  position: relative;
+}
+
+.top-search-area #searchbox {
+  /*값은 임의로 정한것인지??*/
+  height: 40px;
+  width: 105px;
+  margin-left: 26px;
+  border: none;
+  background-color: #edeee2;
+  margin-top: 2.5px;
+  outline: none;
+}
+.top-search-area label {
+  position: absolute;
+  display: block;
+  width: 28px;
+  height: 28px;
+  background: url("../img/search-btn.png") no-repeat;
+  text-indent: -99999px;
+  font-size: 0;
+  right: 24px;
+  top: 8px;
+}
+.util-list {
+  float: left;
+}
+.util-list li {
+  float: left;
+  margin-left: 42px;
+  margin-top: 3.5px; /*why???*/
+}
+.util-list li > a {
+  display: block;
+  text-indent: -9999px;
+  font-size: 0;
+}
+.util-list li:first-child > a {
+  width: 38px;
+  height: 38px;
+  background: url(../img/mypage-icon.png) no-repeat;
+}
+.util-list li:last-child > a {
+  width: 34px;
+  height: 38px;
+  background: url("../img/cart-icon.png") no-repeat center;
+}
+.util-list li:last-child {
+  margin-left: 49px;
+}
+
+.header-bottom {
+  height: 50px;
+  border-bottom: 1px solid #404040;
+}
+.header-bottom .inner {
+  position: relative;
+}
+.header-bottom #allMenuBtn {
+  float: left;
+  background: url("../img/allmenu-btn.png") no-repeat;
+  text-indent: -9999px;
+  font-size: 0;
+  width: 45px;
+  height: 27px;
+  margin-left: 23px;
+  cursor: pointer;
+  border: none;
+}
+.header-bottom .gnb {
+  float: left;
+  margin-left: 264px;
+}
+.header-bottom .gnb > li {
+  float: left;
+}
