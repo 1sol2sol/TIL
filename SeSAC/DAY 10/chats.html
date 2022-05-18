@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chats!</title>
+    <script src="https://kit.fontawesome.com/c8a1586b63.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="header-column">
+                <i class="fa-solid fa-jet-fighter"></i>
+                <i class="fa-solid fa-wifi"></i>
+            </div>
+            <div class="header-column">
+                <span class="header-time">15:29</span>
+            </div>
+            <div class="header-column">
+                <i class="fa-regular fa-moon"></i>
+                <i class="fa-brands fa-bluetooth-b"></i>
+                <span class="header-battery">100%<i class="fa-solid fa-battery-full"></i></span>
+            </div>
+        </div> <!--header-top-->
+        <div class="header-bottom">
+            <div class="header-column">
+                <span class="header-text">Edit</span>
+            </div>
+            <div class="header-column">
+                <span class="header-text">Chats <span class="header-number"><i class="fa-solid fa-caret-down"></i></span></span>
+            </div>
+            <div class="header-column">
+                <i class="fa-solid fa-gear"></i>
+            </div>
+        </div> <!--header-bottom-->
+    </header>
+    <!-- e:header -->
+    <main class="chats"> <!-- 익스플로어를 고려하면 main은 사용하지 않는게 좋음-->
+        <div class="search-bar">
+            <i class="fa fa-search"></i>
+            <label for="searchFriends" class="blind">친구찾기</label><!-- htmlFor-->
+            <input type="search" id="searchFriends" placeholder="Find friends, chats, Plus Friends">
+        </div><!-- //검색영역 -->
+        <section class="chat-section">
+            <div class="chat-section-row-box">
+                <div class="chat-section-row">
+                    <div class="chat-section-column">
+                        <img src="images/empty.jpg" alt="사용자">
+                        <div class="chat-info">
+                            <span class="chat-section-name">Friend Name</span>
+                            <p class="chat-section-message">
+                                Hello! This is a test message!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="chat-time">
+                        17:33
+                    </div>
+                </div><!-- row -->
+            </div><!-- chat 섹션 로우 박스-->
+            <div class="chat-section-row-box">
+                <div class="chat-section-row">
+                    <div class="chat-section-column">
+                        <img src="images/empty.jpg" alt="사용자">
+                        <div class="chat-info">
+                            <span class="chat-section-name">Friend Name</span>
+                            <p class="chat-section-message">
+                                Hello! This is a test message!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="chat-time">
+                        17:33
+                    </div>
+                </div><!-- row -->
+            </div><!-- chat 섹션 로우 박스-->
+            <div class="chat-section-row-box">
+                <div class="chat-section-row">
+                    <div class="chat-section-column">
+                        <img src="images/empty.jpg" alt="사용자">
+                        <div class="chat-info">
+                            <span class="chat-section-name">Friend Name</span>
+                            <p class="chat-section-message">
+                                Hello! This is a test message!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="chat-time">
+                        17:33
+                    </div>
+                </div><!-- row -->
+            </div><!-- chat 섹션 로우 박스-->
+            <div class="chat-section-row-box">
+                <div class="chat-section-row">
+                    <div class="chat-section-column">
+                        <img src="images/empty.jpg" alt="사용자">
+                        <div class="chat-info">
+                            <span class="chat-section-name">Friend Name</span>
+                            <p class="chat-section-message">
+                                Hello! This is a test message!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="chat-time">
+                        17:33
+                    </div>
+                </div><!-- row -->
+            </div><!-- chat 섹션 로우 박스-->
+            <div class="chat-section-row-box">
+                <div class="chat-section-row">
+                    <div class="chat-section-column">
+                        <img src="images/empty.jpg" alt="사용자">
+                        <div class="chat-info">
+                            <span class="chat-section-name">Friend Name</span>
+                            <p class="chat-section-message">
+                                Hello! This is a test message!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="chat-time">
+                        17:33
+                    </div>
+                </div><!-- row -->
+            </div><!-- chat 섹션 로우 박스-->
+            <div class="chat-section-row-box">
+                <div class="chat-section-row">
+                    <div class="chat-section-column">
+                        <img src="images/empty.jpg" alt="사용자">
+                        <div class="chat-info">
+                            <span class="chat-section-name">Friend Name</span>
+                            <p class="chat-section-message">
+                                Hello! This is a test message!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="chat-time">
+                        17:33
+                    </div>
+                </div><!-- row -->
+                
+            </div><!-- chat 섹션 로우 박스-->
+        </section> <!--chat-section--> 
+    </main>
+    <!-- e:main -->
+    <nav  class="tab-bar">
+        <a href="index.html" class="tab-bar-tab tab-bar-selected">
+            <i class="fa fa-user"></i>
+            <span class="tab-bar-title">Friends</span>
+        </a>
+        <a href="index.html" class="tab-bar-tab">
+            <i class="fa fa-comment"></i>
+            <span class="tab-bar-title">Chats</span>
+        </a>
+        <a href="find.html" class="tab-bar-tab">
+            <i class="fa fa-search"></i>
+            <span class="tab-bar-title">Find</span>
+        </a>
+        <a href="more.html" class="tab-bar-tab">
+            <i class="fa fa-ellipsis-h"></i>
+            <span class="tab-bar-title">More</span>
+        </a>
+    </nav>
+    <div class="big-screen-text">
+        <span>Please make your screen smaller</span>
+    </div>
+</body>
+</html>
