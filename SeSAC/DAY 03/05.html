@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표(게시판 형태) 연습</title>
+    <style>
+        .tb{border-collapse: collapse; margin: auto;}
+        .tb th{border-top: 2px solid olive; border-bottom: 2px solid olive; height: 30px;}
+        .tb td{border-bottom: 1px solid #666; text-align: center; height: 30px; font-size: 14px;}
+        .tb td:nth-child(2){text-align: left; padding-left: 10px;}
+        .tb td:nth-child(4){background: url('img/icon_cha03.gif') no-repeat right 100px center;}
+    </style>
+</head>
+<body>
+    <table class="tb">
+        <captioln></captioln>
+        <colgroup>
+            <col style="width: 100px;">
+            <col style="width: 700px;">
+            <col style="width: 150px;">
+            <col style="width: 150px;">
+            <col style="width: 100px;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">번호</th>
+                <th scope="col">제목</th>
+                <th scope="col">일시</th>
+                <th scope="col">글쓴이</th>
+                <th scope="col">HIT</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>99</td>
+                <td class="content">게시글의 제목이 들어가는 부분<span><img src="img/icon_file.gif" alt=""></span></td>
+                <td>2018-8-14</td>
+                <td>홍길동</td>
+                <td>999</td>
+            </tr>
+            <tr>
+                <td>99</td>
+                <td class="content">게시글의 제목이 들어가는 부분<span><img src="img/icon_file.gif" alt=""></td>
+                <td>2018-8-14</td>
+                <td>홍길동</td>
+                <td>999</td>
+            </tr>
+            <tr>
+                <td>99</td>
+                <td class="content">게시글의 제목이 들어가는 부분<span><img src="img/icon_file.gif" alt=""></td>
+                <td>2018-8-14</td>
+                <td>홍길동</td>
+                <td>999</td>
+            </tr>
+            <tr>
+                <td>99</td>
+                <td class="content">게시글의 제목이 들어가는 부분<span><img src="img/icon_file.gif" alt=""></td>
+                <td>2018-8-14</td>
+                <td>홍길동</td>
+                <td>999</td>
+            </tr>
+            <tr>
+                <td>99</td>
+                <td class="content">게시글의 제목이 들어가는 부분<span><img src="img/icon_file.gif" alt=""></td>
+                <td>2018-8-14</td>
+                <td>홍길동</td>
+                <td>999</td>
+            </tr>
+            <tr>
+                <td>99</td>
+                <td class="content">게시글의 제목이 들어가는 부분<span><img src="img/icon_file.gif" alt=""></td>
+                <td>2018-8-14</td>
+                <td>홍길동</td>
+                <td>999</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

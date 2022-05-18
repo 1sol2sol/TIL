@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bbs1{width: 500px; height:300px;}
+        .bbs1,.bbs1 td{border:1px solid #000}
+        .timetable{width: 700px;height: 400px; border: 1px solid #333}
+        .timetable td, .timetable th{border: 1px solid #333}
+    </style>
+</head>
+<body>
+    <table class="bbs1">
+        <caption>표 연습</caption>
+            <tbody>
+                <tr>
+                    <td>1열</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+            </tbody>
+    </table>
+
+    <table class="timetable">
+        <caption>시간표</caption>
+        <thead>
+            <tr>
+                <th scope="col">월</th>
+                <th scope="col">화</th>
+                <th scope="col">수</th>
+                <th scope="col">목</th>
+                <th scope="col">금</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="5"></td>
+            </tr>
+            <tr>
+                <td rowspan="2"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td rowspan="3"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>    
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표(게시판 형태)</title>
+    <style>
+        .free-bbs{border-collapse: collapse;}
+        .free-bbs caption{display: none;}
+        .free-bbs th{border-top: 2px solid #666;border-right: 1px solid #999; height: 35px; background-color: #e0e0e0; font-size: 14px;}
+        .free-bbs th:last-child{border-right: none;}
+        .free-bbs td{height: 40px; border-right: 1px solid #999; 
+        border-top: 1px solid #999; text-align: center;font-size: 14px; color: #606060;}
+        .free-bbs td:last-child{border-right: none;}
+        .free-bbs td:nth-child(2){text-align: left; padding-left: 10px;}
+        .free-bbs tr:last-child{border-bottom: 2px solid #666;}
+        .free-bbs td .notice{background-color: #09f; color: #fff; padding: 4px 10px;}
+    </style>
+</head>
+<body>
+    <table class="free-bbs">
+        <caption>자유게시판</caption>
+        <colgroup>
+            <col style="width: 80px;"></col>
+            <col style="width: 550px;"></col>
+            <col style="width: 90px;"></col>
+            <col style="width: 115px;"></col>
+            <col style="width: 80px;"></col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">순번</th>
+                <th scope="col">제목</th>
+                <th scope="col">작성자</th>
+                <th scope="col">작성일</th>
+                <th scope="col" class="last">조회수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong class="notice">공지</strong></td>
+                <td>반복글/광고글 삭제 안내입니다.</td>
+                <td>운영자</td>
+                <td>2021.01.04</td>
+                <td>968</td>
+            </tr>
+            <tr>
+                <td>12194</td>
+                <td>한국어 교원 2급 자격증 수업 지금 빨리 시작하세요! (내일배움...</td>
+                <td>조*권</td>
+                <td>2022.05.04</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>12194</td>
+                <td>한국어 교원 2급 자격증 수업 지금 빨리 시작하세요! (내일배움...</td>
+                <td>조*권</td>
+                <td>2022.05.04</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>12194</td>
+                <td>한국어 교원 2급 자격증 수업 지금 빨리 시작하세요! (내일배움...</td>
+                <td>조*권</td>
+                <td>2022.05.04</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>12194</td>
+                <td>한국어 교원 2급 자격증 수업 지금 빨리 시작하세요! (내일배움...</td>
+                <td>조*권</td>
+                <td>2022.05.04</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>12194</td>
+                <td>한국어 교원 2급 자격증 수업 지금 빨리 시작하세요! (내일배움...</td>
+                <td>조*권</td>
+                <td>2022.05.04</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 응용</title>
+    <style>
+        .tb{width: 700px; height: 250px; border: 1px solid #333; border-collapse: collapse;}
+        .tb td, .tb th{border: 1px solid #333; }
+        
+    </style>
+</head>
+<body>
+    <table class="tb">
+        <caption>테이크아웃커피 비교대상 제품</caption>
+        <colgroup>
+            <col span="2" style="background-color: #ccc; width: 100px;">
+            <col>
+            <col style="background-color: #ddd; width: 50px;">
+            <col>
+            <col style="background-color: rgb(240, 240, 194);">
+        </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col" colspan="2">분류</th>
+                    <th scope="col">브랜드명</th>
+                    <th scope="col">기본 사이즈</th>
+                    <th scope="col">제품명</th>
+                    <th scope="col">가격(원)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" rowspan="2" >해외 커피 브랜드</th>
+                    <th scope="row" >미국</th>
+                    <td>스타벅스커피</td>
+                    <td>Tall</td>
+                    <td>카페아메리카노</td>
+                    <td>3,900</td>
+                </tr>
+                <tr>
+                    <th scope="row" >이탈리아</th>
+                    <td>커피빈</td>
+                    <td>Small</td>
+                    <td>아메리카노</td>
+                    <td>4,300</td>
+                </tr>
+                <tr>
+                    <th scope="row" rowspan="4" colspan="2" >국내 커피 브랜드</th>
+                    <td>엔제리너스커피</td>
+                    <td>Small</td>
+                    <td>아메리카노</td>
+                    <td>3,600</td>
+                </tr>
+                <tr>
+                    <td>이디야 커피</td>
+                    <td>One size</td>
+                    <td>아메리카노</td>
+                    <td>2,500</td>
+                </tr>
+                <tr>
+                    <td>카페베네</td>
+                    <td>Regular</td>
+                    <td>아메리카노</td>
+                    <td>3,800~4,500</td>
+                </tr>
+                <tr>
+                    <td>탐앤탐스 커피</td>
+                    <td>Tall</td>
+                    <td>아메리카노</td>
+                    <td>3,600</td>
+                </tr>
+            </tbody>
+    </table>
+</body>
+</html>
