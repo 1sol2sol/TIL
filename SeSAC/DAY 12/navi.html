@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        *{box-sizing: border-box;}
+        .inner{
+            width: 1200px;
+            margin: auto;
+        }
+        .wrapper{min-width:1200px; width: 100%;}
+        header{background-color: #fff; width: 100%;}
+        .header-top{
+            height: 34px;
+            border-bottom: 1px solid #aaa;
+        }
+        .header-top .inner {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .util{
+            display: flex;
+        }
+
+        .util>li>a{
+            display: block;
+            height: 33px;
+            line-height: 33px;
+            font-size: 12px;
+            padding: 0 10px;
+            border-left: 1px solid #aaa;
+        }
+
+        .util>li:last-child>a{border-right: 1px solid #aaa;}
+        
+        /* ---------------------s전체메뉴 컨트롤------------------ */
+        .header-bottom{padding:40px 0px; 
+            background-color: rgb(214, 243, 183);
+            height: 100px;
+            overflow: hidden; /*넘친 부분(.depth2) 숨기려고 */
+            transition: height 0.35s ;
+        }
+
+        .header-bottom:hover{
+            /*.header-bottom 에서 overflow: hidden;이 상속되어 hover되어도 overflow:hidden 임 
+            따라서 컨텐츠가 height: 250px을 넘어가게 되면 넘어가는 부분은 숨겨짐  */
+            height: 250px;
+        }
+
+        .header-bottom .inner{
+            display: flex;
+            padding: 0 12px;
+            justify-content: space-between;
+        }
+
+        .header-bottom .logo{font-size: 34px; font-weight: bold;}
+
+        .header-bottom .inner .gnb{
+            display: flex;
+            width: 700px;
+            justify-content: space-between;
+        }
+
+        .header-bottom .gnb .depth1>a{
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            display: block;
+            height: 34px;
+            line-height: 34px;
+        }
+
+        .header-bottom .gnb .depth1:hover>a{ 
+            /* depth2에 hover 되어 있을때도 depth1>a가 여전히 호버되어있길 원해서 depth1이 호버되어있을때  */
+            color: crimson;
+        }
+
+        .header-bottom .gnb .depth2{
+            padding-top: 30px;
+        }
+
+        .header-bottom .gnb .depth2>li>a{
+            color: #666;
+            display: block;
+            height: 30px;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header-top"> 
+                <!--boder-bottom 주려고 inner위에 한번 더 감쌈 -->
+                <div class="inner"><!-- 가운데 영역으로 묶으려고-->
+                    <ul class="util">
+                        <li><a href="#">ENGLISH</a></li>
+                        <li><a href="#">SITEMAP</a></li>
+                        <li><a href="#">SEARCH</a></li>
+                    </ul>
+                </div><!--// inner-->
+            </div><!--// header-top-->
+            <div class="header-bottom">
+                <div class="inner">
+                    <h1 class="logo">Gallery</h1>
+                    <nav>
+                        <ul class="gnb">
+                            <li class="depth1">
+                                <a href="#">갤러리</a>
+                                <ul class="depth2">
+                                    <li><a href="#">갤러리 소개</a></li>
+                                    <li><a href="#">관람안내</a></li>
+                                    <li><a href="#">오시는길</a></li>
+                                </ul>
+                            </li> <!--1-->
+                            <li class="depth1">
+                                <a href="#">갤러리</a>
+                                <ul class="depth2">
+                                    <li><a href="#">갤러리 소개</a></li>
+                                    <li><a href="#">관람안내</a></li>
+                                    <li><a href="#">오시는길</a></li>
+                                </ul>
+                            </li><!--2-->
+                            <li class="depth1">
+                                <a href="#">갤러리</a>
+                                <ul class="depth2">
+                                    <li><a href="#">갤러리 소개</a></li>
+                                    <li><a href="#">관람안내</a></li>
+                                    <li><a href="#">오시는길</a></li>
+                                </ul>
+                            </li><!--3-->
+                            <li class="depth1">
+                                <a href="#">갤러리</a>
+                                <ul class="depth2">
+                                    <li><a href="#">갤러리 소개</a></li>
+                                    <li><a href="#">관람안내</a></li>
+                                    <li><a href="#">오시는길</a></li>
+                                </ul>
+                            </li><!--4-->
+                            <li class="depth1">
+                                <a href="#">갤러리</a>
+                                <ul class="depth2">
+                                    <li><a href="#">갤러리 소개</a></li>
+                                    <li><a href="#">관람안내</a></li>
+                                    <li><a href="#">오시는길</a></li>
+                                </ul>
+                            </li><!--5-->
+                        </ul> <!-- //gnb -->
+                    </nav>
+                </div>
+            </div><!--// header-bottom-->
+        </header>
+    </div>
+</body>
+</html>
