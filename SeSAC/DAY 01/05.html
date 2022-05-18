@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{font-size: 20px;color: blue;}/*주석내용*/
+
+        p{color:hsl(0, 100%, 80%);font-weight: bold;}
+
+        .text1{letter-spacing: 5px;}
+
+        #txtLine{text-decoration: underline;font-family: 'Times New Roman', Times, serif;}
+
+        #point{font-style: italic;color: rgba(166,200,0); text-transform: uppercase;}
+        
+        #align{text-indent: 150px; line-height: 1.5;} 
+        /*본문에 가장 많이 쓰는 행간 1.5
+          계산은 폰트 사이즈 기준으로 한다.
+        */
+
+        .break1{width: 500px; word-break: break-all;
+        border-top: 3px solid #f00;
+        border-bottom: 5px double #f93;}
+        /* word-break: keep-all; 단어별 영문 기본값 */
+
+        .break2{
+            border: 5px solid rgb(215,20,200);
+            border-top-color: #699;
+            width:500px; word-break: keep-all;} /* 단어별 */
+        /* word-break: break-all; 철자별 한글 기본값 */
+
+    </style>
+    
+</head>
+<body>
+    <p class="text1" id="txtLine">
+        <span id="point"> ipsum dolor sit amet consectetur adipisicing elit.</span> Quisquam, obcaecati numquam aliquam voluptate veniam possimus maxime tenetur nesciunt, amet dicta quis dolorum? Praesentium numquam ea repudiandae illum, alias provident eius voluptatum nulla unde non beatae consequatur est doloribus quisquam ullam autem facilis magni molestiae, consectetur quas harum amet, libero pariatur optio! Fugiat fuga laborum minus facere, <span> incidunt est excepturi nisi iusto dolor mollitia voluptatibus nihil dolore, at dolores necessitatibus maiores nam quibusdam nulla aut et. </span>
+        Aliquid cum, culpa quidem eaque, fuga nam placeat, praesentium fugit dolore debitis esse? Aliquid alias veniam provident vero maiores fuga vitae ut nihil cumque.
+    </p><!--주석내용-->
+
+    <!--전체 블럭 단축키 ctrl + /
+        부분 블럭 단축기 alt+shift+A
+    -->
+
+    <p class="text1" id="align">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet incidunt nesciunt, quisquam quam, ipsam, modi ipsa eaque quaerat impedit a perspiciatis distinctio recusandae aperiam cum ad adipisci. Molestias, consectetur cum.
+    </p>
+
+    <p class="break1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt rem quas saepe accusamus repudiandae est minima sequi ipsam quisquam hic quaerat libero, praesentium nulla debitis corrupti officia, provident, autem enim?
+    </p>
+
+    <p class="break2">
+        선거에 있어서 최고득표자가 2인 이상인 때에는 국회의 재적의원 과반수가 출석한 공개회의에서 다수표를 얻은 자를 당선자로 한다. 정당의 설립은 자유이며, 복수정당제는 보장된다.
+    </p>
+</body>
+</html>
