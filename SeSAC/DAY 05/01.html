@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <style>
+      .tab-box {
+        width: 250px;
+        margin: auto;
+        height: 264px;
+        border: 1px solid red;
+      }
+      .tab-box img {
+        width: 250px;
+      }
+      .tab {
+        position: relative;
+        padding-top: 15px;
+      }
+      .tab dt {
+        float: left;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        font-size: 12px;
+        color: #606060;
+        border: 1px solid #d0d0d0;
+        background-color: #fff;
+        margin: 0 2px;
+      }
+      .tab dd {
+        position: absolute;
+        top: 50px;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tab-box">
+      <dl class="tab">
+        <dt>1</dt>
+        <dd><img src="img/tab1/1.jpg" alt="" /></dd>
+        <dt>2</dt>
+        <dd><img src="img/tab1/2.jpg" alt="" /></dd>
+        <dt>3</dt>
+        <dd><img src="img/tab1/3.jpg" alt="" /></dd>
+        <!-- 이미지가 겹치면 먼저 마크업한게 아래 , 나중에 마크업한게 위로 올라온다.-->
+      </dl>
+    </div>
+  </body>
+</html>
