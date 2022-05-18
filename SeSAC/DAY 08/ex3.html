@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-size: 16px;
+      }
+      .ex1 {
+        font-size: 16px;
+      }
+      .ex2 {
+        font-size: 1em; /*현재 상위 요소가 body이기 때문에 body 16px의 1em*/
+      }
+      .ex3 {
+        font-size: 100%; /*현재 바디의 폰트 사이즈 16px의 100% = 16px*/
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="ex1">폰트사이즈</h1>
+    <h1 class="ex2">폰트사이즈</h1>
+    <h1 class="ex3">폰트사이즈</h1>
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+  </body>
+</html>

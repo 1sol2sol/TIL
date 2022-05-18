@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        width: 300px;
+        height: 200px;
+        background-color: blueviolet;
+        margin: auto;
+      }
+      .box1 > div {
+        width: 50%;
+        height: 50%;
+        background-color: yellow;
+      }
+      .box2 {
+        width: 400px;
+        height: 400px;
+        border: 5px solid blue;
+        max-width: auto;
+      }
+      .box2 > div {
+        width: calc(50% - 25px);
+        height: 50%;
+        float: left;
+        background-color: green;
+      }
+      .box2-1 {
+        margin-right: 25px;
+      }
+      .box2-2 {
+        margin-left: 25px;
+      }
+      .box3,
+      .box4 {
+        height: 200px;
+        border: 5px solid red;
+      }
+      .box3 > div {
+        width: 1280px;
+        background-color: #354;
+        height: 200px;
+        margin: auto;
+      }
+      .box4 > div {
+        height: 100%;
+        background-color: blue;
+        margin: auto;
+        width: 80%;
+      }
+      .box5 {
+        width: 100vw;
+        height: 19.722222222vw;
+        background: red;
+        margin-bottom: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <div></div>
+    </div>
+    <div class="box2">
+      <div class="box2-1"></div>
+      <div class="box2-2"></div>
+    </div>
+    <div class="box3">
+      <div></div>
+    </div>
+    <div class="box4">
+      <div></div>
+    </div>
+    <div class="box5"></div>
+  </body>
+</html>

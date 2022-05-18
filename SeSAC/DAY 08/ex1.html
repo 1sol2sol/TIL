@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        html{
+            font-size: 20px;
+        }
+      .box1 {
+        width: 500px;
+        height: 500px;
+        border: 1px solid red;
+        font-size: 30px;
+      }
+      .box2 {
+        width: 400px;
+        height: 400px;
+        border: 1px solid rgb(0, 255, 183);
+        font-size: 2rem; /*2em: 상위요소를 기준으로 하여 60px*/
+      }
+      .box3 {
+        width: 300px;
+        height: 300px;
+        border: 1px solid rgb(76, 0, 255);
+        font-size: 2rem; /*2em: 상위요소를 기준으로 하여 120px*/
+      }
+      .box4 {
+        width: 200px;
+        height: 200px;
+        border: 1px solid rgb(219, 246, 11);
+        font-size: 2rem; /*2em: 상위요소를 기준으로 하여 240px*/
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      박스1
+      <div class="box2">
+        박스2
+        <div class="box3">
+          박스3
+          <div class="box4">박스4</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
