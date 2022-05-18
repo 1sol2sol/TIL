@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+  .flex-container{
+    height: 300px;
+    background-color: skyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .flex-container>div{
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="flex-container">
+  <div>center</div> 
+  <!--  상위요소에  flex 선언이 되어있으면 안에 있는 text도 자식 아이템이 될 수 있다.
+  만약 글자가 span으로 감싸져 있다면 span 자체가 가운데 정렬이 되고 글자가 가운데 졍렬이 되지는 않는다.-->
+</div>
+</body>
+</html>
