@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+      .box{width: 300px; height: 300px; background-color: turquoise; margin: 20px;}
+      .box>div{width: 100px; height: 100px; background-color: thistle;}
+      #box1{margin: auto; position: relative;}
+      #box1>div:nth-child(2){left: 100px; top:100px; position: absolute;}
+      #box1>div:nth-child(3){left: 200px; top:200px; position: absolute;}
+      #box2{position: fixed; right: 0; bottom: 0; }
+      #box2>div:nth-child(1){position: absolute; top: 50px; right: 50px;}
+      #box2>div:nth-child(2){position: absolute; bottom: 0; right: 0;}
+      #box2>div:nth-child(3){position: absolute; background-color: tomato; top: 50%; left: 50%; 
+        margin-top: -50px; margin-left: -50px;}
+      #box3{position: fixed; bottom: 0; left: 0;}
+      #box3>div{position: absolute; left: 50%; bottom: 50%; margin-bottom: -50px; margin-left: -50px;}
+      #box4{margin: 50px auto 0; position: relative;}
+      #box4>div{position: absolute; left: 0px; right: 0; margin: auto; top:0; bottom: 0;}
+    </style>
+</head>
+<body>
+<div class="box" id="box1">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div> 
+<div class="box" id="box2">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div> 
+<div class="box" id="box3">
+    <div>3</div>
+</div> 
+<div class="box" id="box4">
+    <div></div>
+</div>
+</body>
+</html>
