@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        li{list-style: none;}
+        div{width:400px; height: 100px; border: 1px solid red; margin: 100px; }
+        div:nth-child(1){overflow: hidden;}
+        div:nth-child(2){overflow: scroll;}
+        div:nth-child(3){overflow: auto;}
+        div:nth-child(4){overflow: visible;} /*기본값*/
+        ul{width: 500px; background-color: red;  }
+        ul>li{width: 100px; height: 100px; background-color: blue; float: left;}
+        .clearfix::after{content: ''; clear: both; display: block;}
+    </style>
+</head>
+<body>
+    <ul class="clearfix">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        
+    </ul>
+    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa aut, tempora est magni repellat odit nam error cumque veniam inventore cum id alias dolor commodi laudantium excepturi sequi mollitia ipsam?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa aut, tempora est magni repellat odit nam error cumque veniam inventore cum id alias dolor commodi laudantium excepturi sequi mollitia ipsam?</div>
+
+    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </div>
+
+    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa aut, tempora est magni repellat odit nam error cumque veniam inventore cum id alias dolor commodi laudantium excepturi sequi mollitia ipsam?</div>
+
+    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa aut, tempora est magni repellat odit nam error cumque veniam inventore cum id alias dolor commodi laudantium excepturi sequi mollitia ipsam?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa aut, tempora est magni repellat odit nam error cumque veniam inventore cum id alias dolor commodi laudantium excepturi sequi mollitia ipsam?</div>
+</body>
+</html>

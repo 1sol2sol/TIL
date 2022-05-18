@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* 초기화 */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+p {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/*inherit: 상속
+a 태그의 기본값은 blue인데 <p>태그 안에 <a> 태그를 만들 경우 p태그 컬러를
+블랙으로 설정해도 기본값인 blue로 설정되는데 color:inherit 을 사용할 경우
+상위요소의 컬러를 상속하므로 상위요소에서 black을 설정한경우 black 으로 된다.
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 100%;
+} /*100%일경우 기본 16px*/
+body {
+  line-height: 1;
+}
+table {
+  border-collapse: collapse;
+}
+.cf::after {
+  content: "";
+  clear: both;
+  display: block;
+  width: 0;
+  height: 0;
+}
+.wrap {
+  width: 602px;
+  margin: auto;
+  border: 1px solid #333;
+}
+.title_area {
+  padding: 45px 15px 0;
+}
+.title_area > h1 {
+  float: left;
+}
+.title_area > a {
+  float: right;
+  font-size: 14px;
+}
+.list_area {
+  padding: 15px 15px 0;
+}
+.list_area > ul > li {
+  float: left;
+  word-break: keep-all;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  width: 184px;
+  text-align: center;
+} /*단어별로 끊어줌 keep-all*/
+.list_area > ul > li:nth-child(3n) {
+  margin-right: 0;
+}
+.list_area > ul > li .des {
+  font-size: 12px;
+  margin-top: 5px;
+}

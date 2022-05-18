@@ -1,0 +1,28 @@
+.header{height: 100px; border-bottom: 1px solid #999;}
+.inner{width: 1200px; margin: auto; /*border: 1px solid red;*/}
+
+.header .logo{float: left; line-height: 100px; font-weight: bold;
+font-size: 24px;}
+.header .gnb{float: right;}
+.header .gnb li{float: left; width: 100px; height: 100px; 
+text-align: center; line-height: 100px;}
+.header .gnb li a{display: block; height: 100px;}
+.header .gnb li a:hover{background-color: #000; color: #fff;}
+
+.main_banner{height:700px; 
+    background: url('./../img/husky/bg2.jpg') no-repeat fixed left top -200px / cover;}
+.main_banner h2{display: none;}
+
+.container{padding-top: 80px; padding-bottom: 100px; }
+.container .img_list{width:960px; margin: auto; /*border: 3px solid blue;*/}
+.container .img_list li{float: left;}
+.container .img_list2 {width: 960px; margin: 20px auto; /*border: 3px solid green;*/}
+.container .img_list2 li{width: 320px; float: left; word-break: keep-all; text-align: center;
+    }
+.container .img_list2 .title {font-weight: bold; margin: 20px 0;}
+.container .img_list2 li p:nth-of-type(2){font-size: 14px;}
+
+.subvisual{height: 1000px; background: url('./../img/page/1.jpg') no-repeat fixed left top -200px / cover;}
+
+.footer{height: 50px; background-color: #000; text-align: center; line-height: 50px; color: #fff; }
+.footer address{font-style: normal;}
