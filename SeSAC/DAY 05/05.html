@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <style>
+      ul {
+        width: 500px;
+        margin: 50px auto 0;
+      }
+      ul > li {
+        float: left;
+        width: 100px;
+      }
+      ul > li > a {
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        position: relative;
+      }
+      ul > li > a::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 0;
+        background-color: red;
+        position: absolute;
+        left: 50%;
+        top: 45px;
+        transform: translateX(-50%);
+      }
+      ul > li:hover > a::after {
+        width: 100px;
+        transition: width 0.45s;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="cf">
+      <li><a href="#">기관</a></li>
+      <li><a href="#">사업</a></li>
+      <li><a href="#">후원</a></li>
+      <li><a href="#">참여</a></li>
+      <li><a href="#">소식</a></li>
+    </ul>
+  </body>
+</html>

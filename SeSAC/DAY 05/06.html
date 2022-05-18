@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <style>
+      ul {
+        width: 700px;
+        margin: auto;
+      }
+      ul > li {
+        float: left;
+        width: 140px;
+      }
+      ul > li > a {
+        display: block;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        position: relative;
+      }
+      ul > li > a::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 0;
+        background-color: blue;
+        position: absolute;
+        top: 75px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      ul > li:hover > a::after {
+        width: 70px;
+        transition: width 0.45s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <ul class="cf">
+        <li><a href="#">기업정보</a></li>
+        <li><a href="#">인재채용</a></li>
+        <li><a href="#">뉴스룸</a></li>
+        <li><a href="#">제품정보</a></li>
+        <li><a href="#">고객지원</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
