@@ -1,0 +1,316 @@
+header {
+  height: 113px;
+  border-bottom: 1px solid #d0d0d0;
+}
+.inner {
+  width: 1200px;
+  margin: auto;
+}
+.header-left {
+  float: left;
+}
+.header-right {
+  float: right;
+}
+header .logo {
+  float: left;
+  margin-top: 22.5px; /*(113-68)/2 헤더의높이-로고이미지높이/2*/
+  margin-right: 25px;
+}
+header .logo a {
+  display: block;
+  background: url("../img/sprite__common.png") no-repeat 0 -152px;
+  width: 255px;
+  height: 68px;
+  /*a 안에 들어있는 text gmarket을 안보이게 하기 위한 코드*/
+  text-indent: -9999px;
+  font-size: 0;
+}
+header .search-area {
+  float: left;
+  border: 2px solid #067dfd;
+  height: 48px;
+  border-radius: 24px;
+  width: 500px;
+  margin-top: 32.5px; /*(113-48)/2 */
+}
+header .search-box {
+  height: 48px;
+  box-sizing: border-box;
+  padding: 8px;
+  position: relative;
+}
+header .search-btn {
+  background: url("../img/sprite__common.png") no-repeat -756px -62px;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999px;
+  font-size: 0;
+  border: none;
+  position: absolute; /*부모요소에 패딩이 있으면 패딩부터 좌표가 들어간다*/
+  right: 10px;
+  top: 11.5px; /*(48-25)/2 , (서치박스높이-서치버튼)/2*/
+}
+header .search-box input[type="text"] {
+  /*속성선택자: input 태그 중 type이 text인것*/
+  border: none;
+  width: 450px;
+  height: 32px;
+  outline: none; /*커서가 들어갔을때 아웃라인 없애줌*/
+  line-height: 32px;
+  font-size: 17px;
+  color: #067dfd;
+}
+header .top-menu {
+  margin-top: 40px;
+}
+header .top-menu li {
+  float: left;
+  margin-right: 20px;
+}
+header .top-menu li.mypage a {
+  display: block;
+  background: url("../img/sprite__common.png") no-repeat -302.5px -78px;
+  background-size: 400px auto;
+  width: 26.5px;
+  height: 27px;
+  text-indent: -9999px;
+  font-size: 0;
+  border: none;
+}
+header .top-menu li.recent-list a {
+  display: block;
+  background: url("../img/sprite__common.png") no-repeat -339.5px -77px;
+  background-size: 400px auto;
+  width: 29.5px;
+  height: 29px;
+  text-indent: -9999px;
+  font-size: 0;
+}
+header .top-menu li.cart a {
+  display: block;
+  background: url("../img/sprite__common.png") no-repeat -337.5px -41px;
+  background-size: 400px auto;
+  width: 34px;
+  height: 31px;
+  text-indent: -9999px;
+  font-size: 0;
+}
+footer .footer-menu {
+  border-bottom: 1px solid #d0d0d0;
+}
+footer .footer-policy {
+  float: left;
+  padding: 16px 0;
+}
+footer .footer-policy li {
+  display: inline-block;
+  padding: 0 25px;
+  position: relative;
+}
+footer .footer-policy li a {
+  height: 20px;
+  display: block;
+  line-height: 20px;
+  font-size: 14px;
+}
+footer .footer-policy li a strong {
+  color: #067dfd;
+}
+footer .footer-policy li:first-child {
+  padding-left: 0;
+}
+footer .footer-policy li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  /*top: 2px;*/
+  height: 13px;
+  width: 1px;
+  background-color: #d0d0d0;
+}
+footer .footer-policy li:first-child::before {
+  display: none;
+}
+footer .seller-service {
+  padding-top: 9px;
+  float: right;
+  position: relative;
+}
+footer .seller-service-btn {
+  border: 1px solid #d0d0d0;
+  width: 120px;
+  height: 34px;
+  background-color: #fff;
+  text-align: left;
+  text-indent: 8px;
+  position: relative;
+  cursor: pointer;
+}
+footer .seller-service-btn::after {
+  content: "";
+  display: block;
+  background: url("../img/sprite__common.png") no-repeat -343.5px -117.5px;
+  background-size: 400px auto;
+  width: 9.5px;
+  height: 5px;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+footer .seller-service-list-box {
+  width: 220px;
+  border: 1px solid #666;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  top: 47px;
+  display: none;
+}
+
+footer .seller-service-list li a {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #666;
+}
+
+footer .seller-service-list li a:hover {
+  color: #111;
+}
+footer .seller-service-btn:hover + .seller-service-list-box {
+  display: block; /*형제 요소 선택자이므로 +를 사용하여야 한다. */
+}
+footer .company-info {
+  overflow: hidden;
+  padding: 13px 0 19px;
+  box-sizing: border-box;
+}
+
+footer .info {
+  float: left;
+  width: 620px;
+}
+
+footer .customer {
+  float: left;
+  width: 580px;
+}
+
+footer .company-info .content-box {
+  margin-top: 5px;
+  font-size: 13px;
+  letter-spacing: -0.5px;
+  line-height: 23px;
+  font-size: 13px;
+  color: #757c8a;
+}
+
+footer .company-info .inner .title {
+  position: relative;
+  display: inline-block;
+  padding-right: 19px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  color: #5e636d;
+}
+
+footer .title.link_company-title::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  margin-top: -3px;
+  background: url(../img/sprite__common.png) no-repeat -358px -112px / 400px
+    auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+footer .company-info .content-box .text_emphasis {
+  color: #2e8de5;
+}
+
+footer .legal-info {
+  padding: 9px 0 18px;
+  border-top: 1px solid #ececec;
+}
+
+footer .legal-info .list__legal-info{
+  overflow: hidden;
+  width: 850px;
+  font-size: 0;
+}
+footer .legal-info .list__legal-info >li {
+  display: inline-block;
+  margin-right: 30px;
+  padding-top: 7px;
+  font-size: 13px;
+  line-height: 20px;
+  color: #94989f;
+}
+
+footer .legal-info .button__legal-info{
+  border: none;
+  background-color: #fff;
+}
+
+footer .legal-info .button__legal-info,
+footer .legal-info .link__legal-info,
+footer .legal-info .link__mail {
+  font-size: 13px;
+  line-height: 20px;
+  color: #94989f;
+}
+
+footer .legal-info .button__legal-info::after,
+footer .legal-info .link__legal-info::after {
+  background-position: -238px -34px;
+  display: inline-block;
+}
+
+footer .sprite__common::after {
+  content: "";
+  margin-left: 5px;
+  background: url(../img/sprite__common.png) no-repeat;
+  background-size: 400px auto;
+  width: 5px;
+  height: 10px;
+}
+
+footer .footer-notice {
+  padding: 16px 0 85px;
+  border-top: 1px solid #ececec;
+}
+
+footer .footer-notice .text__notice {
+  font-size: 12px;
+  line-height: 20px;
+  color: #94989f;
+}
+
+footer .footer-notice .text__notice .button__notice {
+  margin-left: 8px;
+  margin-top: -1px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #94989f;
+  border: 0;
+  text-decoration: underline;
+  background-color: #fff;
+  cursor: pointer;
+}
+footer .footer-notice .text__copyright {
+  font-size: 12px;
+  line-height: 20px;
+  color: #94989f;
+}
