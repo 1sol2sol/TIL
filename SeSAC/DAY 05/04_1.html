@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <style>
+      .gnb {
+        width: 1400px;
+        height: 50px;
+        margin: 30px auto;
+        position: relative;
+      }
+      .gnb .depth1 {
+        float: left;
+        width: 200px;
+        text-align: center;
+      }
+      .gnb .depth1 > a {
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+        font-size: 18px;
+        background-color: #333;
+      }
+      .gnb .depth1 > a:hover {
+        background-color: salmon;
+      }
+      .gnb .depth1:hover > .depth2 {
+        display: block;
+      }
+      .gnb .depth2 {
+        position: absolute;
+        left: 0;
+        top: 50px;
+        width: 1400px;
+        background-color: rgb(225, 220, 220);
+        display: none;
+      }
+      .gnb .depth2 > li {
+        float: left;
+      }
+      .gnb .depth2 > li > a {
+        display: block;
+        width: 150px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 17px;
+      }
+      .gnb .depth2 > li > a:hover {
+        background-color: #444;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="gnb cf">
+      <li class="depth1">
+        <a href="#">HOME</a>
+        <ul class="depth2">
+          <li>
+            <a href="#">HOME01</a>
+          </li>
+          <li>
+            <a href="#">HOME02</a>
+          </li>
+          <li>
+            <a href="#">HOME03</a>
+          </li>
+          <li>
+            <a href="#">HOME04</a>
+          </li>
+          <li>
+            <a href="#">HOME05</a>
+          </li>
+        </ul>
+      </li>
+      <li class="depth1">
+        <a href="#">NEWS</a>
+        <ul class="depth2">
+          <li>
+            <a href="#">NEWS01</a>
+          </li>
+          <li>
+            <a href="#">NEWS02</a>
+          </li>
+          <li>
+            <a href="#">NEWS03</a>
+          </li>
+          <li>
+            <a href="#">NEWS04</a>
+          </li>
+          <li>
+            <a href="#">NEWS05</a>
+          </li>
+        </ul>
+      </li>
+      <li class="depth1">
+        <a href="#">PROJECTS</a>
+        <ul class="depth2">
+          <li>
+            <a href="#">PROJECTS01</a>
+          </li>
+          <li>
+            <a href="#">PROJECTS02</a>
+          </li>
+          <li>
+            <a href="#">PROJECTS03</a>
+          </li>
+          <li>
+            <a href="#">PROJECTS04</a>
+          </li>
+          <li>
+            <a href="#">PROJECTS05</a>
+          </li>
+        </ul>
+      </li>
+      <li class="depth1">
+        <a href="#">BLOG</a>
+        <ul class="depth2">
+          <li>
+            <a href="#">BLOG01</a>
+          </li>
+          <li>
+            <a href="#">BLOG02</a>
+          </li>
+          <li>
+            <a href="#">BLOG03</a>
+          </li>
+          <li>
+            <a href="#">BLOG04</a>
+          </li>
+          <li>
+            <a href="#">BLOG05</a>
+          </li>
+        </ul>
+      </li>
+      <li class="depth1">
+        <a href="#">CHAT</a>
+        <ul class="depth2">
+          <li><a href="#">CHAT01</a></li>
+          <li><a href="#">CHAT02</a></li>
+          <li><a href="#">CHAT03</a></li>
+          <li><a href="#">CHAT04</a></li>
+          <li><a href="#">CHAT05</a></li>
+        </ul>
+      </li>
+      <li class="depth1">
+        <a href="#">ABOUTUS</a>
+        <ul class="depth2">
+          <li><a href="#">ABOUTUS01</a></li>
+          <li><a href="#">ABOUTUS02</a></li>
+          <li><a href="#">ABOUTUS03</a></li>
+          <li><a href="#">ABOUTUS04</a></li>
+          <li><a href="#">ABOUTUS05</a></li>
+        </ul>
+      </li>
+      <li class="depth1">
+        <a href="#">CONTACT</a>
+        <ul class="depth2">
+          <li><a href="#">CONTACT01</a></li>
+          <li><a href="#">CONTACT02</a></li>
+          <li><a href="#">CONTACT03</a></li>
+          <li><a href="#">CONTACT04</a></li>
+          <li><a href="#">CONTACT05</a></li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>
