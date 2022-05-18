@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 150px;
+        height: 150px;
+        border: 2px solid red;
+        display: inline-block;
+      }
+      /*display: inline-block; - 나란히 정렬되는 인라인의 성격을 유지하면서 넓이와 높이를 가질 수 있다.
+      하지만 정확한 간격으로 넓이가 들어가야 한다거나 공백 없이 붙이고 싶다면 사용할 수 없다. */
+      div:nth-child(1) {
+      }
+      div:nth-child(2) {
+      }
+      div:nth-child(3) {
+      }
+    </style>
+  </head>
+  <body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </body>
+</html>
