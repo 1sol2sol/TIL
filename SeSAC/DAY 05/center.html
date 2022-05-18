@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      p {
+        width: 150px;
+        height: 150px;
+        background-color: #f96;
+        float: left;
+        margin: 15px;
+      }
+      p:nth-of-type(1) {
+        text-align: center;
+        line-height: 150px;
+      }
+      p:nth-of-type(2) {
+        text-align: center;
+        line-height: 20px;
+        padding-top: 45px;
+        height: 105px;
+      }
+      /*padding을 주면 바깥쪽으로 영역이 늘어나는 것처럼 보이기 때문에 전체 높이에서 빼줘야한다. */
+      p:nth-of-type(3) {
+        text-align: center;
+        line-height: 20px;
+        padding-top: 55px;
+        box-sizing: border-box;
+      }
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: #697;
+        clear: both;
+      }
+      div > div {
+        width: 50px;
+        height: 50px;
+        background-color: #658;
+      }
+      #box1,
+      #box2,
+      #box3,
+      #box4 {
+        margin: 10px;
+      }
+      #box1 {
+        padding-top: 50px;
+        box-sizing: border-box;
+      }
+      #box1 > div {
+        margin: auto;
+        text-align: center;
+        line-height: 50px;
+      }
+      #box2 {
+        position: relative;
+      }
+      #box2 > div {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -25px;
+        margin-top: -25px;
+      }
+      #box3 {
+        position: relative;
+      }
+      #box3 > div {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="txt1">세로중앙</p>
+    <p id="txt2">
+      세로중앙<br />
+      세로중앙<br />
+      세로중앙
+    </p>
+    <p id="txt3">
+      세로중앙<br />
+      세로중앙
+    </p>
+    <div id="box1">
+      <div>1</div>
+      <div>2</div>
+    </div>
+    <div id="box2">
+      <div>3</div>
+    </div>
+    <div id="box3">
+      <div>4</div>
+    </div>
+    <div id="box4"></div>
+  </body>
+</html>
