@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .tabbox{width: 500px; margin: 50px auto;}
+        .tab_title{
+            background-color: rgb(240, 87, 87);
+            display: flex;
+            border-top: 1px solid rgb(240, 87, 87);
+            border-left: 1px solid rgb(240, 87, 87);
+            border-right: 1px solid rgb(240, 87, 87);
+        }
+        .tab_title>li{ /*.tab_title>li>a에 높이가 들어가 있어서 부모에는 주지 않아도 됨 */
+            width: 25%; 
+            
+        }
+        .tab_title>li>a{
+            
+            display: block; 
+            height: 45px;
+        }
+        .tab_title>li>a>span{
+            display: block;
+            height: 45px;
+            text-align: center;
+            line-height: 45px;
+            color: #fff;
+        }
+
+        .tab_title>li.active>a>span{
+            color: rgb(240, 87, 87);
+            background-color: #fff;
+            position: relative;
+        }
+
+        .tab_title>li.active>a>span::after{
+            content: '';
+            height: 2px;
+            width: 30px;
+            background-color: rgb(240, 87, 87);
+            display: block;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+        }
+
+        .tab-content{
+            position: relative; /*이 컨텐츠 박스를 기준으로 아래 ul들을 겹치려고 사용함*/
+            box-sizing: border-box;
+            padding: 5px 20px;
+            height: 385px;
+            border: 1px solid #dddfed;
+            border-top-color: transparent;
+        }
+
+        .tab-content>ul{
+            position: absolute;
+            background-color: #fff;
+            display: none;
+            width: calc(100% - 40px); 
+            /*absolute로 띄워놓은 상태로 width값을 주지 않으면 컨텐츠만큼만 넓이를 가짐
+            .tab-content에 좌우패딩이 20px씩 들어가 있어 100%를 주게 되면 넓이가 140px이 된다.
+            따라서 100% - 40px을 해줘야함
+            */
+        }
+
+        .tab-content>ul:first-child{
+            display: block; /*전체 ul이 display: none 되어 있어서 첫번째 ul을 보이게하기 위해*/
+        }
+
+        .tab-content>ul>li{
+            box-sizing: border-box;
+            padding: 10px 0;
+            border-bottom: 1px solid #f2f2f2;
+            position: relative; /*.list-icon 을 위치하기 위한 relative*/
+        }
+
+        .tab-content>ul>li .title{font-size: 14px;}
+        .tab-content>ul>li .title a{
+            display: block; 
+            margin-right: 80px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .tab-content>ul>li .date{color: #999; font-size: 12px;}
+        .tab-content>ul>li .list-icon{
+            position: absolute;
+            padding: 4px 6px;
+            right: 5px;
+            top: 10px;
+            color: rgb(240, 87, 87);
+            font-size: 12px;
+            background-color: #fff8f8;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabbox">
+        <ul class="tab_title">
+            <li class="active"><a href="#"><span>원서접수 중</span></a></li>
+            <li><a href="#"><span>수험표 공고</span></a></li>
+            <li><a href="#"><span>합격자 발표</span></a></li>
+        </ul>
+        <div class="tab-content"> 
+            <ul>
+                <li> <!-- 정렬을 space-between 하고 싶으면 p 태그 2개를 한번 더 감싸야한다.-->
+                    <p class="title"><a href="#">2022년 제6회 CAD실무능력평가 정기시험(2022.6.11.)</a></p>
+                    <p class="date">온라인2022-05-24 ~ 2022-05-30</p>
+                    <a href="#" class="list-icon">접수 D-6</a>
+                </li>
+                <li>
+                    <p class="title"><a href="#">2022년 제6회 CAD실무능력평가 정기시험(2022.6.11.)</a></p>
+                    <p class="date">온라인2022-05-24 ~ 2022-05-30</p>
+                    <a href="#" class="list-icon">접수 D-6</a>
+                </li>
+                <li>
+                    <p class="title"><a href="#">2022년 제6회 CAD실무능력평가 정기시험(2022.6.11.)</a></p>
+                    <p class="date">온라인2022-05-24 ~ 2022-05-30</p>
+                    <a href="#" class="list-icon">접수 D-6</a>
+                </li>
+                <li>
+                    <p class="title"><a href="#">2022년 제6회 CAD실무능력평가 정기시험(2022.6.11.)</a></p>
+                    <p class="date">온라인2022-05-24 ~ 2022-05-30</p>
+                    <a href="#" class="list-icon">접수 D-6</a>
+                </li>
+                <li>
+                    <p class="title"><a href="#">2022년 제6회 CAD실무능력평가 정기시험(2022.6.11.)</a></p>
+                    <p class="date">온라인2022-05-24 ~ 2022-05-30</p>
+                    <a href="#" class="list-icon">접수 D-6</a>
+                </li>
+            </ul> <!-- 1: ul-->
+            <ul>
+                <li>
+                    <p class="title"><a href="#">제주여자상업고등학교 </a></p>
+                    <p class="date">온라인2022-05-24 ~ 2022-05-30</p>
+                    <a href="#" class="list-icon">접수 D-6</a>
+                </li>
+                <li>
+                    <p class="title"><a href="#">제주여자상업고등학교 </a></p>
+                    <p class="date">온라인2022-05-24 ~ 2022-05-30</p>
+                    <a href="#" class="list-icon">접수 D-6</a>
+                </li>
+                <li>
+                    <p class="title"><a href="#">제주여자상업고등학교 </a></p>
+                    <p class="date">온라인2022-05-24 ~ 2022-05-30</p>
+                    <a href="#" class="list-icon">접수 D-6</a>
+                </li>
+                <li>
+                    <p class="title"><a href="#">제주여자상업고등학교 </a></p>
+                    <p class="date">온라인2022-05-24 ~ 2022-05-30</p>
+                    <a href="#" class="list-icon">접수 D-6</a>
+                </li>
+                <li>
+                    <p class="title"><a href="#">제주여자상업고등학교 </a></p>
+                    <p class="date">온라인2022-05-24 ~ 2022-05-30</p>
+                    <a href="#" class="list-icon">접수 D-6</a>
+                </li>
+            </ul> <!--2 : ul-->
+            <ul>
+                <li>
+                    <p class="title"><a href="#">2022년 제 4회 GTQ정기시험(2022.04.23)</a></p>
+                    <p class="date">온라인2022-05-24 ~ 2022-05-30</p>
+                    <a href="#" class="list-icon">접수 D-6</a>
+                </li>
+                <li>
+                    <p class="title"><a href="#">2022년 제 4회 GTQ정기시험(2022.04.23)</a></p>
+                    <p class="date">온라인2022-05-24 ~ 2022-05-30</p>
+                    <a href="#" class="list-icon">접수 D-6</a>
+                </li>
+                <li>
+                    <p class="title"><a href="#">2022년 제 4회 GTQ정기시험(2022.04.23)</a></p>
+                    <p class="date">온라인2022-05-24 ~ 2022-05-30</p>
+                    <a href="#" class="list-icon">접수 D-6</a>
+                </li>
+                <li>
+                    <p class="title"><a href="#">2022년 제 4회 GTQ정기시험(2022.04.23)</a></p>
+                    <p class="date">온라인2022-05-24 ~ 2022-05-30</p>
+                    <a href="#" class="list-icon">접수 D-6</a>
+                </li>
+                <li>
+                    <p class="title"><a href="#">2022년 제 4회 GTQ정기시험(2022.04.23)</a></p>
+                    <p class="date">온라인2022-05-24 ~ 2022-05-30</p>
+                    <a href="#" class="list-icon">접수 D-6</a>
+                </li>
+            </ul> <!--3 : ul-->
+        </div>
+    </div>
+</body>
+</html>
