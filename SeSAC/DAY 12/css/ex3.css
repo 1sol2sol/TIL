@@ -1,0 +1,95 @@
+@import url('../css/reset.css');
+
+body{
+    background-color: rgb(224, 199, 180);
+}
+
+.wrap{
+    width: 70%;
+    margin: auto;
+    
+}
+
+.wrap header {
+    background: url(../images/main_img02.png) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 30vw;
+    position: relative;
+
+}
+
+.wrap header .title{
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 45%;
+    left: 80%;
+    
+}
+
+.wrap header nav{
+    background-color: rgba(209, 67, 65, 0.9);
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    
+}
+
+.wrap header nav a{
+    display: block;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    font-size: 14px;
+    padding: 0 50px;
+}
+
+.cf{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+
+
+
+.cf aside{
+    width: 200px;
+   
+}
+
+.cf aside a{
+    display: block;
+    
+}
+.cf aside img{
+   width: 200px;
+   margin-bottom: 20px;
+   filter: grayscale(90%);
+   
+}
+.cf h2{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.cf div .title{
+    font-weight: bold;
+    font-size: 16px;
+}
+.cf p{
+
+}
+
+footer address{
+    background-color: #333333;
+    height: 40px;
+    color: #fff;
+    line-height: 40px;
+    text-align: center;
+}
