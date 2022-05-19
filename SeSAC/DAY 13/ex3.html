@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('css/all.min.css');
+        @import url('css/normalize.css');
+        /*공통레이아웃*/
+        html{height: 100%;}
+
+        body{ /*body에 height를 지정하지 않으면 body의 높이는 컨텐츠의 높이 만큼이다.*/
+            background: linear-gradient(0deg, #958171, #f4dac6) no-repeat;
+            background-attachment: fixed;
+            /*공간이 스크롤될때 백그란드 같이 올라갈건지 고정시킬건지 gradient트 때문에 이 속성을 안주면 그라디언트가 같이 딸려 올라감 */
+            height: 100%; 
+            /*body의 상위가 높이가 잡혀 있어야 body에서 100%가 적용 가능하다. body의 상위는 html
+            만약 background-color라면 루트의 height값, body의 height값과 관계없이 보이는 화면 뷰포트 전체에 적용된다.*/
+            /*스크롤 없는 페이지를 만들고 싶으면 body에 사이즈를 정해주고 넘는 컨텐츠들은 overflow: hidden 처리 해줌 */
+        }
+
+        .wrap{
+            color: #333;
+            width: 960px;
+            margin: auto;
+            background-color: #fff;
+        }
+
+        header{
+            height: 400px;
+            position: relative;
+            background: url('images/main_img02.png') no-repeat center top / cover;
+        }
+
+        header .title{
+            position: absolute;
+            right: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        nav{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            background-color: rgba(205,30,30,.8);
+            display: flex;
+            flex-wrap: wrap; /*화면이 작아지면 수평-> 수직으로 변하게 만들거라서 */
+        }
+
+        nav a{
+            flex: 0 0 25%;
+            text-align: center;
+            line-height: 50px;
+            box-sizing: border-box; /*why? padding-right 줄거라서 transition 효과로*/
+            color: #eee;
+            transition: all .4s;
+        }
+
+        nav a:hover{
+            padding-right: 30px;
+        }
+
+        nav a:focus{
+            background-color: #5f0000;
+        }
+        nav a .fa-leaf{
+            opacity: 0; /*안보이게 해줌 */
+            font-size: 18px;
+            transition: all 0.3s 0.1s;
+        }
+
+        nav a:hover .fa-leaf{
+            opacity: 1;  /*hover 되었을때 보이게 함 */
+            margin-right: 8px; /*잎사귀 아이콘과 글자 사이를 떨어뜨려진 것처럼 보이게 하려고*/
+        }
+
+        main{
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap; /*화면이 작아지면 수평-> 수직으로 변하게 만들거라서 */
+        }
+
+        main section{flex: 75%;}
+
+        main aside{flex: 25%}
+        
+        main aside img{
+            width: 100%;
+            filter: saturate(30%) brightness(50%);
+            transition: all .5s;
+            vertical-align: middle; /*img의 baseline 때문에 공간이 떠서 주는것*/
+        }
+
+        main aside a {
+            display: block;
+            margin-bottom: 10px;
+            border: 5px solid transparent;
+            transition: all 0.5s;
+        }
+
+        main aside a:hover{
+            border-color: #777;
+        }
+
+        main aside a:hover img{
+            filter: none;
+        }
+
+        main h2{text-align: center; padding: 20px 0;}
+
+        main h3{padding: 10px 0;}
+
+        main p{
+            margin-bottom: 25px;
+            letter-spacing: -0.5px;
+            font-size: 20px;
+            line-height: 1.5;
+        }
+
+        footer{
+            height: 50px;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer address{
+            font-size: normal;
+            color: #ddd;
+        }
+
+        /* 1024 - 640 Tablet*/
+        @media screen and (min-width:640px) and (max-width:1024px){ 
+            .wrap{width: 95%;} /*전체 넓이가 95%*/
+            header{height: 250px;}
+            main section{flex: 100%; padding: 20px;}
+            main aside{flex: 100%; padding: 20px; display: flex;}
+            main aside a{box-sizing: border-box;}
+        }
+        /* 639이하 mobile */
+        @media screen and (max-width:639px){
+            .wrap{width: 95%;}
+            header{height: 720px;}
+            header .title{right: 5%; top: 5%;}
+            nav{height: auto;  /*height를 컨텐츠 높이만큼 주러고 auto*/
+                bottom: 50%;
+                left: 50%;
+                transform: translate(-50%,50%);
+                width: 70%;
+                background: transparent;
+            }
+            nav a{
+                flex: 0 0 100%; /*밀려서 수직으로 떨어지게 하려고*/
+                border-radius: 5px 10px;
+                margin-bottom: 20px;
+                background-color: rgba(205,30,30,.8);
+            }
+            main section{flex: 100%; padding: 20px;}
+            main aside{flex: 100%; padding: 20px;}
+            main aside a{box-sizing: border-box;}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1 class="title">
+                <a href="#">Nature Skin</a>
+            </h1>
+            <nav>
+                <a href="#"><span class="fas fa-leaf"></span>Nature Skin</a>
+                <a href="#"><span class="fas fa-leaf"></span>Guide Info</a>
+                <a href="#"><span class="fas fa-leaf"></span>Reservation</a>
+                <a href="#"><span class="fas fa-leaf"></span>Custom</a>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h2 class="title">About Nature Skin</h2>
+                <div>
+                    <h3 class="title">Lorem, ipsum dolor.</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam aperiam dignissimos voluptatibus ipsam cupiditate eaque vel, tempora asperiores esse, consequuntur tempore ipsa quis nisi minus sint facilis praesentium. Sunt, ipsa!
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam aperiam dignissimos voluptatibus ipsam cupiditate eaque vel, tempora asperiores esse, consequuntur tempore ipsa quis nisi minus sint facilis praesentium. Sunt, ipsa!
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam aperiam dignissimos voluptatibus ipsam cupiditate eaque vel, tempora asperiores esse, consequuntur tempore ipsa quis nisi minus sint facilis praesentium. Sunt, ipsa!
+                    </p>
+                </div>
+            </section>
+            <aside>
+                <a href="#"><img src="images/subimg01.png" alt=""></a>
+                <a href="#"><img src="images/subimg02.png" alt=""></a>
+                <a href="#"><img src="images/subimg03.png" alt=""></a>
+            </aside>
+        </main>
+        <footer>
+            <address>&copy; Nature Skin.</address>
+        </footer>
+    </div>
+</body>
+</html>
