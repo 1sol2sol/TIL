@@ -33,5 +33,8 @@ value2 *= 10;
 console.log(value2); // 100
 
 value2 %= 10;
-console.log(value2);
+console.log(value2); // 0 : 나머지가 0이기 때문에 
+
+
+
 
