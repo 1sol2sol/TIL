@@ -1,0 +1,154 @@
+@import url('../css/reset.css');
+
+.wrap{
+    width: 100%;
+    margin: auto;
+    background-color: #fff;
+}
+header{
+    height: 60px;
+    background-color: rgb(125, 150, 232) ;
+    margin-bottom: 10px;
+}
+
+header h1{
+    color: #eee;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 35px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav{
+    background-color: #2E60FF;
+    
+}
+
+nav .nav__list{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content:left;
+    
+}
+
+nav ul li{
+    position: relative;
+    left: 7%;
+    height: 50px;
+    
+}
+
+nav ul li::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 50px;
+    background-color: #fff;
+}
+
+nav ul>li:last-child::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 50px;
+    background-color: #fff;
+}
+
+
+nav ul li a{
+    text-align: center;
+    display: block; 
+    font-weight: 550;
+    line-height: 50px;
+    padding: 0px 20px;
+    margin: 0 10px;
+}
+nav ul li:hover{
+    background-color: rgba(240, 240, 240, 0.6);
+}
+
+main{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 20px 200px 100px;
+}
+
+main .small{
+    flex: 30%;
+}
+
+main .big{
+    flex: 70%;
+    margin-left: 50px;
+}
+.small div{
+    background-color: #CDCE00;
+    width: 100%;
+    height: 180px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    
+}
+
+.small div h2{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+.small div span{
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 20px;
+
+}
+
+.big div{
+    width: 100%;
+    margin-top: 20px;
+    border-bottom: 1px solid red;
+}
+
+.big div:first-child{
+    margin-top: 0;
+}
+.big div h3{
+    font-weight: bold;
+    padding-bottom: 10px;
+    font-size: 17px;
+}
+
+.big div p{
+    line-height: 1.5;
+}
+
+footer{
+    height: 50px;
+    text-align: center; 
+    font-size: 17px;
+    line-height: 50px;
+}
+
+/* 1024 - 640 Tablet*/
+@media screen and (min-width:640px) and (max-width:1024px){ 
+    
+    main {display: flex; flex-wrap: wrap; margin: 20px 100px;}
+    main .small{flex: 100%;  display: flex;  flex-wrap: nowrap; justify-content: center;}
+    main .small div:first-child{margin-right: 20px;}
+    main .big{flex: 100%; margin-left: 0;} 
+}
+
+/* 639~이하 mobile*/
+@media screen and (max-width:639px) {
+    .nav__list{flex-direction: column; }
+    nav ul li {left: 0; position: relative;}
+    main {display: flex; flex-wrap: wrap; margin: 20px 50px;}   
+    main .small{flex: 100%;  }
+    main .big{flex: 100%; margin-left: 0;}
+}
