@@ -1,0 +1,38 @@
+@use './core';
+
+
+@mixin border-radius($radius){
+    color: #fff;
+    border: 10px solid yellow;
+    background-color: skyblue;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    float: left;
+    border-radius: $radius;
+}
+
+.box1{
+    @include border-radius(20px)
+}
+.box2{
+    @include border-radius(40px)
+}
+.box3{
+    @include border-radius(50%)
+}
+.box4{
+    @include border-radius(50px 0 50px 0)
+}
+.box5{
+    @include border-radius(100% 0 0 0)
+}
+.box6{
+    @include border-radius(50% 50% 50% 0)
+}
+.box7{
+    @include border-radius(100% 0 100% 0)
+}
+.box8{
+    @include border-radius(50% 50% 0 0)
+}

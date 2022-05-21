@@ -1,0 +1,110 @@
+@use './core';
+$main-color: rgb(243, 63, 63);
+$sub-color: rgb(165, 133, 235);
+$basic-g-color1: #999 ;
+$basic-g-color2: #666 ;
+$basic-g-color3: #333 ;
+$basic-g-color4: #000 ;
+$basic-w-color:#fff;
+$size-lg: 500px;
+$size-md: 300px;
+$size-sm: 150px;
+$size-xs: 50px;
+$mt50:50px;
+$mt10: 10px;
+
+@mixin btn-basic($bgcolor){
+    font-size: 20px;
+    padding: 20px 40px;
+    color: #fff;
+    background-color: $bgcolor;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: $size-lg + 50px;
+    height: $size-sm;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: $mt50
+}
+.box1{
+    @extend .box;
+    border: 5px solid $main-color;
+}
+
+.box2{
+    @extend .box;
+    border: 5px solid $sub-color; 
+}
+
+.box4{
+    width: $size-lg;
+    height:$size-lg;
+    background-color: $basic-g-color3;
+    >p{
+        color: $main-color;
+        font-size: $size-xs;
+    }
+    a{
+        &:hover{
+            color: $main-color;
+        }
+        span{
+            color: $basic-w-color;
+            font-size: $size-xs;
+        }
+    }
+}
+
+.btn{
+    padding: 10px 10px;
+    color: #fff;
+    border-radius: 5px;
+    border: transparent;
+    cursor: pointer;
+}
+.btn__box{
+    margin: $mt50
+}
+.btn_1{
+    @extend .btn;
+    background-color: blue;
+}
+
+.btn_2{
+    @extend .btn;
+    background-color: $basic-g-color2;
+}
+
+.btn_3{
+    @extend .btn;
+    background-color: green;
+}
+.btn_4{
+    @extend .btn;
+    background-color: $main-color;
+}
+.btn_5{
+    @extend .btn;
+    background-color: yellow;
+    color: $basic-g-color4
+}
+.btn_6{
+    @extend .btn;
+    background-color: skyblue;
+    color: $basic-g-color4
+}
+
+.btn1{
+    @include btn-basic(#296);
+}
+.btn2{
+    @include btn-basic(#333);
+}
+.btn3{
+    @include btn-basic(#333);
+}

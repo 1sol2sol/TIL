@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh !important;
+}
+
+li,
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.txt-bold {
+  font-weight: 700;
+}
+
+.box1 {
+  color: #fff;
+  border: 10px solid yellow;
+  background-color: skyblue;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  float: left;
+  border-radius: 20px;
+}
+
+.box2 {
+  color: #fff;
+  border: 10px solid yellow;
+  background-color: skyblue;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  float: left;
+  border-radius: 40px;
+}
+
+.box3 {
+  color: #fff;
+  border: 10px solid yellow;
+  background-color: skyblue;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  float: left;
+  border-radius: 50%;
+}
+
+.box4 {
+  color: #fff;
+  border: 10px solid yellow;
+  background-color: skyblue;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  float: left;
+  border-radius: 50px 0 50px 0;
+}
+
+.box5 {
+  color: #fff;
+  border: 10px solid yellow;
+  background-color: skyblue;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  float: left;
+  border-radius: 100% 0 0 0;
+}
+
+.box6 {
+  color: #fff;
+  border: 10px solid yellow;
+  background-color: skyblue;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  float: left;
+  border-radius: 50% 50% 50% 0;
+}
+
+.box7 {
+  color: #fff;
+  border: 10px solid yellow;
+  background-color: skyblue;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  float: left;
+  border-radius: 100% 0 100% 0;
+}
+
+.box8 {
+  color: #fff;
+  border: 10px solid yellow;
+  background-color: skyblue;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  float: left;
+  border-radius: 50% 50% 0 0;
+}/*# sourceMappingURL=02.css.map */

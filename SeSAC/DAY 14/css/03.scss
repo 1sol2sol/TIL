@@ -1,0 +1,52 @@
+
+$font-base:15px;
+$font-family-base:'Smooch';
+$font-family-headline:'Macondo';
+
+body{
+    font-size: $font-base;
+    line-height: 1.6;
+}
+
+@mixin font-default{
+    font: {
+        family: $font-family-headline;
+        font-weight: 400;
+    }
+    color: #222;
+}
+
+@mixin lg-text {
+    @include font-default;
+    font-size: $font-base * 4;
+    color: crimson;
+}
+
+@mixin md-text {
+    @include font-default;
+    font-size: $font-base * 3;
+}
+
+@mixin sm-text {
+    @include font-default;
+    font-size: $font-base * 2;
+    
+}
+
+@mixin body-text {
+    @include font-default;
+    font-size: $font-base ;
+}
+
+h1{
+    @include lg-text;
+}
+h2{
+    @include md-text;
+}
+h3{
+    @include sm-text;
+}
+h4{
+    @include body-text;
+}
