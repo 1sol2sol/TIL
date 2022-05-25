@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            border: 5px solid #000;
+            width: 900px;
+            height: 200px;
+            background-color: thistle;
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .parent div{
+            color: #fff;
+            font-size: 30px;
+            background-color: violet;
+           /*  height: 100px;
+            width: 100px; */
+            text-align: center;
+            
+        }
+        .parent div:last-child{
+            align-self: stretch; 
+            justify-self: stretch;
+
+        }/*컬럼안에서 자식요소의 넓이 높이를 꽉 채울 때*/
+
+        .container{
+            height: 300px;
+            border: 5px solid #000;
+            background-color: rgb(212, 238, 190);
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 10px;
+            margin: 50px auto;
+        }
+
+        .container div{
+            color: #fff;
+            font-size: 30px;
+            background-color: rgb(83, 99, 76);
+            text-align: center;
+        }
+
+        .container div.item{
+            background-color: red;
+            /* grid-column-start: 1;
+            grid-column-end: 3; */
+            grid-column: 1 / span 3; 
+            /*컬럼라인을 기준으로 시작위치 = 1, 2개 만큼 확장*/
+        }
+       
+        .container div.item2{
+            background-color: blue;
+            grid-row: 2 / span 3; 
+        }
+
+        .container2{
+            margin: 50px auto;
+            height: 300px;
+            border: 5px solid #000;
+            background-color: wheat;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 10px;
+        }
+
+        .container2 div{
+            color: #fff;
+            font-size: 30px;
+            background-color: rgb(131, 110, 70);
+            text-align: center;
+        }
+
+        .container2 div.item{
+            background-color: rgb(238, 179, 17);
+            grid-column: 1 / span 2;  
+        }
+        .container2 div.item2{
+            background-color: rgb(238, 234, 17);
+            grid-row: 1 / span 2; 
+            grid-column-start: 3;
+           
+        }
+        .container2 div.item5{
+            background-color: rgb(189, 236, 135);
+            grid-column: 1 / span 3; 
+            grid-row-start: 3;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div>1</div>
+        <div>2</div>
+    </div>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item2">2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div >8</div>
+    </div>
+    <div class="container2">
+        <div class="item">1</div>
+        <div class="item2">2</div>
+        <div>3</div>
+        <div>4</div>
+        <div class="item5">5</div>
+    </div>
+</body>
+</html>
