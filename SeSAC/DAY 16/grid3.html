@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 500px;
+            border: 5px solid #000;
+            background-color: rgb(190, 228, 175);
+            margin: 50px 0;
+        }
+        .box1{
+            display: grid;
+        }
+        .box1>div{
+            font-size: 30px;
+            text-align: center;
+            padding: 10px;
+            border-bottom: 1px solid #000;
+        }
+        .box1>div:last-child{border-bottom: none;}
+        .item1{
+            grid-row:2;
+            background-color: aquamarine;
+        }
+        .item2{
+            grid-row:4;
+            background-color: cadetblue;
+        }
+
+        .box2{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 5px;
+        }
+        .box2>div{
+            border: 1px solid #000;
+            font-size: 30px;
+            padding: 10px;
+            text-align: center;
+        }
+        .box2>div:nth-child(1){order:6}
+        .box2>div:nth-child(2){order:5}
+        .box2>div:nth-child(3){order:4}
+        .box2>div:nth-child(4){order:3}
+        .box2>div:nth-child(5){order:2}
+        .box2>div:nth-child(6){order:1}
+    </style>
+</head>
+<body>
+    <div class="wrap box1">
+        <div>1</div>
+        <div>2</div>
+        <div class="item1">3</div>
+        <div>4</div>
+        <div>5</div>
+        <div class="item2">6</div>
+    </div>
+    <div class="wrap box2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>
