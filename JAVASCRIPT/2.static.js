@@ -1,6 +1,8 @@
 // static 정적 프로퍼티, 메서드
 
 class Fruit {
+  static MAX_FRUITS = 4; // 최대로 만들수 있는 과일의 갯수를 지정함
+
   // 생성자: new 키워드로 객체를 생성할때 호출되는 함수
   constructor(name, emoji) {
     this.name = name;
@@ -20,6 +22,8 @@ class Fruit {
 }
 const banana = Fruit.makeRandomFruit();
 console.log(banana);
+console.log(Fruit.MAX_FRUITS);
+
 // apple은 Fruit 클래스의 인스턴스이다.
 const apple = new Fruit("apple", "🍎");
 // orange는 Fruit 클래스의 인스턴스이다.
@@ -30,6 +34,9 @@ console.log(orange);
 console.log(apple.name);
 console.log(apple.emoji);
 apple.display();
+
+Math.pow();
+Number.isFinite(1);
 
 // obj는 객체이고, 그 어떤 클래스의 인스턴스도 아니다.
 const obj = { name: "hansol" };
