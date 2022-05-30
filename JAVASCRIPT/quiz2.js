@@ -19,15 +19,15 @@ class Employee {
 
 class FullTimeEmployee extends Employee {
   // 그냥 숫자를 적는것 보다 상수변수를 만들어서 전달해주는것이 가독성이 좋음
-  static PAY_RATE = 10000;
+  static #PAY_RATE = 10000;
   constructor(name, department, hoursPerMonth) {
-    super(name, department, hoursPerMonth, FullTimeEmployee.PAY_RATE);
+    super(name, department, hoursPerMonth, FullTimeEmployee.#PAY_RATE);
   }
 }
 class PartTimeEmployee extends Employee {
-  static PAY_RATE = 8000;
+  static #PAY_RATE = 8000;
   constructor(name, department, hoursPerMonth) {
-    super(name, department, hoursPerMonth, PartTimeEmployee.PAY_RATE);
+    super(name, department, hoursPerMonth, PartTimeEmployee.#PAY_RATE);
   }
 }
 
