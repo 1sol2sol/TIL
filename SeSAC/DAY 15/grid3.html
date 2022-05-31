@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 5px solid #000;
+            width: 900px;
+            height: 300px;
+            background-color: turquoise;
+            display: grid;
+            grid-template-columns: auto auto auto; 
+            /*fr을 사용하게 되면 grid-gap이 먹지 않음 
+            * auto로 사용해야 자식 요소가 가지고 있는 넓이만 가져옴
+            */
+            grid-gap: 10px;
+            
+        }
+
+        .container>div{
+            width: 100px;
+            height: 100px;
+            background-color: thistle;
+        }
+
+        .container1{
+            justify-content: center;
+            
+        }
+        .container2{
+
+        }
+        .container3{
+           
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container1 container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <div class="container2 container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+    <div class="container3 container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>
