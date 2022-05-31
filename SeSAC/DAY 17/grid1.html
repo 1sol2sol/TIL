@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1{
+            border: 5px solid #000;
+            background-color: green;
+            display: grid;
+            grid-template-areas: 'a a a item item ' 'a a a item item';
+             /*반복된 이름만큼 템플릿 영역을 갖는다. 퍼센트나 픽셀이 아닌 이름으로 나누어줌 */
+
+        }
+        .container1>div{
+            text-align: center; 
+            font-size: 30px;
+            border: 1px solid #000;
+        }
+        .container1>div.item{background-color: red; grid-area: item;}
+        /* 자식요소에 grid-row: 2;로 순서를 정해줌 설정안하면 첫번째열로 설정됨  */
+    </style>
+</head>
+<body>
+    <div class="container container1">
+        <div >1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div class="item">7</div>
+        
+    </div>
+</body>
+</html>
