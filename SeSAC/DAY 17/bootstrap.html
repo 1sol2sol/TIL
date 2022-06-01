@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Grid System</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        p{
+            background-color: blue;
+            border-radius: 4px;
+            color: #fff;
+            text-align: center;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> <!-- 그리드가 적용되는 전체 영역-->
+        <div class="row"> 
+            <!-- 컨테이너의 자식으로는 반드시 row가 와야함 !!!
+                 row의 자식으로는 오로지 class가 col인것만 와야함-->
+            <div class="col-1"><p>col1</p></div>
+             <!-- 내가 몇칸을 차지할건지 적어줘야함-->
+            <div class="col-1"><p>col1</p></div>    
+            <div class="col-1"><p>col1</p></div>   
+            <div class="col-1"><p>col1</p></div>    
+            <div class="col-1"><p>col1</p></div>
+            <div class="col-1"><p>col1</p></div>
+            <div class="col-1"><p>col1</p></div>
+            <div class="col-1"><p>col1</p></div>
+            <div class="col-1"><p>col1</p></div>
+            <div class="col-1"><p>col1</p></div>
+            <div class="col-1"><p>col1</p></div>
+            <div class="col-1"><p>col1</p></div>
+        </div> <!-- row -->
+        <div class="row">
+            <div class="col-5"><p>col5</p></div>
+            <div class="col-3"><p>col3</p></div>
+            <div class="col-4"><p>col4</p></div>
+        </div>
+    </div>
+</body>
+</html>
