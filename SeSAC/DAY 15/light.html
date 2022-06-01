@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            html,
+body {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+#container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+  background: pink;
+  margin: 0;
+  padding: 0;
+}
+
+#panel {
+  display: flex;
+  flex-direction: column;
+  /*position: relative;*/
+  justify-content: space-around;
+  align-items: center;
+  /*top: -70px;*/
+  width: 30%;
+  height: 60%;
+  background: black;
+  border-radius: 20px;
+}
+
+.light {
+  width: 100px;
+  height: 100px;
+  background: lightgrey;
+  border-radius: 100%;
+  animation-name: colorChange;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#red {
+  animation-name: redColor;
+}
+
+#yellow {
+  animation-name: yellowColor;
+}
+
+#green {
+  animation-name: greenColor;
+}
+
+#bar {
+  width: 10%;
+  height: 30%;
+  background: black;
+}
+
+
+@keyframes greenColor{
+    	0%{background-color: green}
+    	33%{background-color: green}
+      34%{background-color: grey}
+      100%{background-color: grey}
+    }
+
+
+@keyframes yellowColor{
+      0%{background-color: grey}
+    	33%{background-color: grey}
+      34%{background-color: yellow}
+      66%{background-color: yellow}
+      67%{background-color: grey}
+      100%{background-color: grey}
+}
+    
+    @keyframes redColor{
+      0%{background-color: grey}
+      66%{background-color: grey}
+      67%{background-color: red}
+      100%{background-color: red}
+    }
+    </style>
+</head>
+<body>
+
+<div id="container">
+  <div id="panel">
+    <div class="light" id="red"></div>
+    <div class="light" id="yellow"></div>
+    <div class="light" id="green"></div>
+  </div>
+  <div id="bar"></div>
+</div>
+</body>
+</html>
