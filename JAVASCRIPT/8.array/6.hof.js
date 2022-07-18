@@ -23,7 +23,7 @@ const item1 = { name: "🥛", price: 2 };
 const item2 = { name: "🍪", price: 3 };
 const item3 = { name: "🍙", price: 1 };
 const products = [item1, item2, item3, item2];
-let result = products.find((value) => {
+let result = products.find((value) => { // 각각의 item들의 요소가 인자로 전달됨
   return value.name === "🍪";
 });
 console.log(result);
@@ -44,14 +44,14 @@ console.log(result); // false
 
 // 조건에 맞는 모든 아이템들을 새로운 배열로!
 result = products.filter((item) => item.name === "🍪");
-console.log(result);
+console.log(result); // 쿠키만 모아서 새로운 배열로 만들어서 반환함
 
 console.clear();
 
 // Map 배열의 아이템들을 각각 다른 아이템으로 매핑할 수 있는, 변환해서 새로운 배열 생성!
 const nums = [1, 2, 3, 4, 5];
 result = nums.map((item) => item * 2);
-console.log(result);
+console.log(result); 
 
 result = nums.map((item) => {
   if (item % 2 == 0) {
@@ -63,7 +63,7 @@ result = nums.map((item) => {
 
 console.log(result);
 
-// Flatmap : 중첩된
+// Flatmap : 중첩된 배열을 쫙 펴줌 
 result = nums.map((item) => [1, 2]);
 console.log(result);
 
