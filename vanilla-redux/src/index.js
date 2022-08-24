@@ -1,25 +1,17 @@
+import { createStore } from "redux"; 
+
+
 const add = document.getElementById("add")
 const minus = document.getElementById("minus")
 const number = document.querySelector("span")
 
-let count = 0;
-
-number.innerText = count;
-
-const updateText = () => {
-  number.innerText = count;
+// reducer is a function that modify my data
+const countModifier = (count = 0) => {
+  // return값이 나의 application data가 되는것 
+  return count;
 }
 
-const handleAdd = () => {
-  count = count + 1;
-  updateText()
-}
-const handleMinus = () => {
-  count = count - 1;
-  updateText()
-}
+// store는 나의 data(state)를 저장하는곳(state는 나의 app에서 바뀌는 data를 말함)
+const countStore = createStore(countModifier);
 
-
-
-add.addEventListener("click", handleAdd)
-minus.addEventListener("click", handleMinus)
+console.log(countStore.getState());
