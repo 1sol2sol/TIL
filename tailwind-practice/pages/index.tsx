@@ -2,8 +2,8 @@ import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <div className=" bg-slate-400 py-20 px-20 grid gap-10 min-h-screen">
-      <div className="bg-white sm:bg-red-400 md:bg-teal-400 lg:bg-indigo-400 xl:bg-amber-400 2xl:bg-pink-400 p-6 rounded-3xl shadow-xl">
+    <div className=" bg-slate-400 xl:place-content-center py-20 px-20 grid gap-10 lg:grid-cols-2 xl:grid-cols-3 min-h-screen">
+      <div className="bg-white flex flex-col justify-between p-6 rounded-3xl shadow-xl">
         <span className="font-semibold text-2xl">Select Item</span>
           <ul>
             {[1,2,3,4].map((i) => (
@@ -13,9 +13,7 @@ const Home: NextPage = () => {
               </div>
             ))}
           </ul>
-          <ul>
-            {["a","b","c",""].map((c,i) => <li className=" bg-red-500 py-2 empty:hidden" key={i}>{c}</li>)}
-          </ul>
+
         <div className=" mt-2 pt-2 border-t-2 border-dashed flex justify-between">
           <span>Total</span>
           <span className="font-semibold">$10</span>
@@ -31,7 +29,7 @@ const Home: NextPage = () => {
         </button>
       </div>
       <div className="bg-white rounded-2xl shadow-xl overflow-hidden group">
-        <div className=" bg-blue-500 p-6 pb-14">
+        <div className=" bg-blue-500 portrait:bg-indigo-600 landscape:bg-teal-500 p-6 pb-14 xl:pb-40">
           <span className="text-white text-2xl">Profile</span>
         </div>
         <div className="rounded-3xl relative -top-5 bg-white p-6">
@@ -52,7 +50,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="bg-white p-10 rounded-2xl shadow-xl">
+      <div className="bg-white p-10 rounded-2xl shadow-xl lg:col-span-2 xl:col-span-1">
         <div className="flex justify-between items-center mb-5">
           <span>⬅️</span>
           <div className=" space-x-3">
@@ -88,7 +86,6 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="bg-white p-10 rounded-2xl shadow-xl"></div>
     </div>
   );
 };
