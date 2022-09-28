@@ -7,5 +7,8 @@ module.exports = {
   theme: {
     extend: {},
   },
+  // defult 설정은 media(브라우저의 설정을 따름, 컴퓨터 브라우저가 다크모드 설정이라면 자동으로 다크모드로 보이게됨)
+  // class로 설정하면 토글버튼으로 수동을오 변경할 수 있음
+  darkMode:"class", 
   plugins: [],
 };
