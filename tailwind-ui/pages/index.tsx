@@ -1,11 +1,13 @@
 import type { NextPage } from 'next'
+import Layout from '../components/layout'
 
 
 const Home: NextPage = () => {
   return (
-    <div className='flex flex-col space-y-5 py-10'>
+    <Layout title='Home' hasTabBar>
+          <div className='flex flex-col space-y-5 divide-y'>
     {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
-      <div key={i} className="flex px-4 border-b pb-4 cursor-pointer justify-between">
+      <div key={i} className="flex px-4 pt-5 cursor-pointer justify-between">
         <div className='flex space-x-4'>
           <div className='w-20 h-20 bg-gray-400 rounded-md'/>
           <div className='pt-2 flex flex-col'>
@@ -70,6 +72,7 @@ const Home: NextPage = () => {
       </svg>
     </button>
   </div>
+    </Layout>
   )
 }
 
